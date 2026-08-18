@@ -3,144 +3,257 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About – Prakash Nathan",
+  title: "About – Prakash Nathan | Leadership, Entrepreneurship & Entertainment",
   description:
-    "25+ years in Marketing, Sales & Indian Film Industry. Founder of Eagle Eye Entertainment LLP.",
+    "Building Businesses. Creating Opportunities. Navigating Change. Over three decades of experience across Technology, Media, Entertainment, and Entrepreneurship.",
 };
 
-const tags = [
-  "Film Marketing", "Content Strategy", "Rights Syndication",
-  "Distribution", "Entrepreneurship", "Consulting", "Script Development",
+const techEnterpriseCompanies = [
+  "Ambuja Cements",
+  "Sony",
+  "Xerox",
+  "Videocon",
+  "Moser Baer",
+  "Galaxy Office Automation",
+  "Wysetek Systems",
+  "Unique Solutions",
+];
+
+const mediaEntertainmentCompanies = [
+  "UTV",
+  "Disney",
+  "Ultra Media & Entertainment",
+  "Eagle Eye Entertainment",
+  "CineMarkets Digital Solutions",
+];
+
+const pillars = [
+  {
+    title: "Commercial Growth",
+    desc: "Transforming ideas into resilient, revenue-generating commercial ventures.",
+  },
+  {
+    title: "Strategic Partnerships",
+    desc: "Forging synergistic alliances across studios, platforms, and technology leaders.",
+  },
+  {
+    title: "Content & Rights",
+    desc: "Maximizing the full commercial lifecycle through distribution and syndication.",
+  },
+  {
+    title: "Technology Consulting",
+    desc: "Empowering content with digital capabilities, marketing tech, and innovation.",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      {/* Banner */}
-      <div className="relative pt-32 pb-14 px-6 bg-[#0A0A0C] border-b border-white/5 overflow-hidden">
-        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(212,168,50,0.06) 0%, transparent 70%)" }} />
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="flex items-center gap-2 text-xs text-[#6B6866] font-accent mb-5">
-            <Link href="/" className="no-underline hover:text-[#D4A832] transition-colors">Home</Link>
-            <span className="text-white/10">/</span>
-            <span>About</span>
+      {/* ══ HEADER BANNER ══════════════════════════════════════ */}
+      <div className="relative pt-36 pb-16 px-6 overflow-hidden border-b border-slate-200/80">
+        {/* Glow backdrop */}
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/3 left-10 w-96 h-96 bg-purple-500/15 rounded-full blur-[110px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative z-10 space-y-4">
+          <div className="flex items-center gap-2 text-xs text-[#64748B] font-accent">
+            <Link href="/" className="no-underline text-[#64748B] hover:text-[#D97706] transition-colors">
+              Home
+            </Link>
+            <span className="text-slate-300">/</span>
+            <span className="text-[#B45309] font-medium">About</span>
           </div>
-          <div className="section-label">The Man Behind The Vision</div>
-          <h1 className="font-display text-5xl md:text-6xl font-bold leading-tight text-[#F0EDE8]">
-            About <span className="text-[#D4A832]">Prakash Nathan</span>
+
+          <div className="section-label">Executive Profile &amp; Journey</div>
+
+          <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.12]">
+            Building Businesses. <br />
+            Creating Opportunities. <br />
+            <span className="text-gold-gradient">Navigating Change.</span>
           </h1>
-          <p className="text-[#A8A4A0] text-lg mt-4 max-w-xl">
-            Entrepreneur, Film Marketing Consultant & Founder of Eagle Eye Entertainment LLP
+
+          <p className="font-accent text-base sm:text-lg text-[#475569] max-w-3xl leading-relaxed pt-2">
+            With over three decades of experience across Technology, Media, Entertainment, and Entrepreneurship, Prakash Nathan has built his career across business development, sales, marketing, strategic partnerships, content, distribution, and commercial growth.
           </p>
         </div>
       </div>
 
-      {/* Body */}
-      <section className="py-20 px-6 bg-[#0A0A0C]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.6fr] gap-16 items-start">
-          {/* Left — portrait */}
-          <div className="md:sticky md:top-24">
-            <Image
-              src="/assets/portrait.jpg"
-              alt="Prakash Nathan"
-              width={400}
-              height={530}
-              className="w-full max-w-sm rounded-2xl border border-[#D4A832]/25 object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-300"
-            />
-            <div className="flex flex-wrap gap-2 mt-5">
-              {tags.map((t) => (
-                <span key={t}
-                  className="bg-[#D4A832]/10 border border-[#D4A832]/25 text-[#D4A832] font-accent text-[0.72rem] font-semibold
-                    px-3 py-1 rounded-full tracking-wide">
-                  {t}
-                </span>
+      {/* ══ MAIN PROFILE BODY ══════════════════════════════════ */}
+      <section className="py-20 px-6 relative">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Column (Sticky Portrait & Pillars) */}
+          <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+            <div className="relative group rounded-3xl p-3 glass-card border border-white/90 shadow-[0_20px_50px_rgba(15,23,42,0.1)] overflow-hidden">
+              <div className="relative h-[440px] sm:h-[500px] w-full rounded-2xl overflow-hidden">
+                <Image
+                  src="/assets/portrait.jpg"
+                  alt="Prakash Nathan"
+                  fill
+                  className="object-cover object-top filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60" />
+                
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/90 backdrop-blur-xl border border-slate-200/80 shadow-lg">
+                  <p className="font-display font-bold text-lg text-[#0F172A] m-0">Prakash Nathan</p>
+                  <p className="font-accent text-xs text-[#B45309] font-semibold m-0">30+ Years Leadership in Tech &amp; Entertainment</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Strategic Strengths */}
+            <div className="grid grid-cols-2 gap-3">
+              {pillars.map((item) => (
+                <div key={item.title} className="p-4 rounded-2xl glass-card border border-slate-200/80 space-y-1">
+                  <p className="font-display font-bold text-sm text-[#B45309] m-0">{item.title}</p>
+                  <p className="font-accent text-xs text-[#64748B] leading-snug m-0">{item.desc}</p>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Right — bio */}
-          <div>
-            <div className="section-label">Biography</div>
-            <h2 className="font-display text-3xl font-bold mb-6 leading-snug">
-              25 Years of <span className="text-[#D4A832]">Excellence</span> Across Industries
-            </h2>
-
-            {/* Intro Highlight */}
-            <div className="bg-[#D4A832]/10 border-l-[3px] border-[#D4A832] rounded-r-xl px-5 py-5 mb-8">
-              <p className="text-[#F0EDE8] italic text-[1.02rem] leading-loose m-0">
-                Prakash Nathan is a seasoned Business Consultant with over 25 years of experience in Marketing and Sales, including 15 years dedicated to Media & Entertainment. His illustrious career spans 8 years with Disney & UTV, 5 years as an entrepreneur, and leadership roles at Moserbaer, Ambuja Cement, Sony Electronics, Videocon, and Xerox India.
+          {/* Right Column (Detailed Narrative Sections) */}
+          <div className="lg:col-span-7 space-y-12">
+            {/* Leadership Overview Highlight */}
+            <div className="p-7 sm:p-8 rounded-3xl glass-card border border-amber-500/30 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+              <p className="text-[#0F172A] font-display text-lg sm:text-xl leading-relaxed italic m-0">
+                His professional journey includes leadership roles with organisations such as <span className="text-[#B45309] font-bold not-italic">Ambuja Cements, Sony, Xerox, Videocon, Moser Baer, UTV, and Disney</span>, giving him experience across both enterprise and entertainment businesses with connects across Media &amp; Entertainment and IT industries.
               </p>
             </div>
 
-            {/* Grid of Expertise Areas */}
-            <div className="grid sm:grid-cols-2 gap-5 mb-8">
-              <div className="bg-[#16161C] border border-white/7 rounded-xl p-6 hover:border-[#D4A832]/30 transition-colors">
-                <h3 className="font-display text-lg font-semibold text-[#D4A832] mb-3">Eagle Eye Entertainment</h3>
-                <p className="text-[#A8A4A0] text-sm leading-relaxed">
-                  Founded in 2015, specializing in content development, strategy, marketing, film releases, and rights syndication. Collaborates with industry giants like Salman Khan Films, Red Chillies Entertainment, Purple Pebble Pictures, and Zee.
-                </p>
+            {/* Section 1: From Corporate Leadership to Entrepreneurship */}
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-xs font-accent font-semibold uppercase tracking-wider text-[#B45309]">
+                Entrepreneurial Evolution
               </div>
-
-              <div className="bg-[#16161C] border border-white/7 rounded-xl p-6 hover:border-[#D4A832]/30 transition-colors">
-                <h3 className="font-display text-lg font-semibold text-[#D4A832] mb-3">End-to-End Marketing</h3>
-                <p className="text-[#A8A4A0] text-sm leading-relaxed">
-                  Strategizes entire marketing campaigns, including communication, media planning, budgeting, and distribution consultancy. Contributed significantly to award-winning films like <em>Ventilator</em> (3 National Awards).
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#0F172A]">
+                From Corporate Leadership to <span className="text-gold-gradient">Entrepreneurship</span>
+              </h2>
+              <div className="space-y-4 text-[#475569] text-sm sm:text-base leading-relaxed">
+                <p>
+                  In 2015, Prakash began his entrepreneurial journey with <span className="text-[#0F172A] font-semibold">Eagle Eye Entertainment LLP</span>, building a business focused on content development, marketing, film distribution, rights syndication, and strategic consulting. Over the years, he has worked with leading production houses, studios, creators, and industry stakeholders across the Indian entertainment ecosystem.
                 </p>
-              </div>
-
-              <div className="bg-[#16161C] border border-white/7 rounded-xl p-6 hover:border-[#D4A832]/30 transition-colors">
-                <h3 className="font-display text-lg font-semibold text-[#D4A832] mb-3">Release & Syndication</h3>
-                <p className="text-[#A8A4A0] text-sm leading-relaxed">
-                  Leverages UTV-Disney experience to guide producers on theatrical release strategies (date, scale, territory) and maximizes commercial recoveries through music, satellite, digital, and merchandising rights syndication.
-                </p>
-              </div>
-
-              <div className="bg-[#16161C] border border-white/7 rounded-xl p-6 hover:border-[#D4A832]/30 transition-colors">
-                <h3 className="font-display text-lg font-semibold text-[#D4A832] mb-3">Nurturing Content</h3>
-                <p className="text-[#A8A4A0] text-sm leading-relaxed">
-                  Identifies and strengthens scripts to make them "distributor-friendly." Facilitates meetings between writers, producers, and investors to green-light commercially viable and emotionally resonant cinema.
+                <p>
+                  He also founded <span className="text-[#0F172A] font-semibold">CineMarkets Digital Solutions Pvt. Ltd.</span>, a digital solutions venture focused on the media and entertainment industry, bringing technology and digital capabilities into the business of content. CineMarkets has worked across digital campaigns, social media, and digital partnerships for film properties.
                 </p>
               </div>
             </div>
 
-            <div className="space-y-5 mb-10">
-              <h3 className="font-display text-xl font-bold text-[#F0EDE8]">Operational Mastery & Content Acquisition</h3>
-              <p className="text-[#A8A4A0] text-[0.97rem] leading-loose">
-                During his UTV days, Prakash gained deep exposure to post-production and release operations. He understands the technicalities perfectly and maintains strong connections with key players like UFO, Real Image, Scrabble, and Kay Sera Sera, supervising operational proceedings on some of the biggest releases in India and abroad.
-              </p>
-              <p className="text-[#A8A4A0] text-[0.97rem] leading-loose">
-                Beyond new content development, Prakash has extensive experience in content acquisition—a discipline he pioneered during his time at Moserbaer over 12 years ago and successfully continues today through Eagle Eye Entertainment.
-              </p>
+            {/* Section 2: A Career Defined by Adaptability */}
+            <div className="space-y-4 p-8 rounded-3xl bg-slate-50/80 border border-slate-200/80 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/25 text-xs font-accent font-semibold uppercase tracking-wider text-[#7C3AED]">
+                Core Philosophy
+              </div>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#0F172A]">
+                A Career Defined by <span className="text-gold-gradient">Adaptability</span>
+              </h2>
+              <div className="space-y-4 text-[#475569] text-sm sm:text-base leading-relaxed">
+                <p>
+                  Across different industries and business environments, Prakash's strength has been his ability to recognise opportunity in changing circumstances.
+                </p>
+                <p>
+                  He brings a practical approach to business, understanding the situation, identifying what can be leveraged, and adapting strategy to create value. This ability to move between industries, build relationships, and turn challenges into opportunities has shaped his entrepreneurial and leadership journey.
+                </p>
+              </div>
             </div>
 
+            {/* Section 3: Experience Across Industries */}
+            <div className="space-y-6">
+              <div>
+                <div className="section-label">Industry Breadth</div>
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#0F172A]">
+                  Experience Across <span className="text-gold-gradient">Industries</span>
+                </h2>
+              </div>
+
+              {/* Technology & Enterprise */}
+              <div className="p-6 sm:p-7 rounded-2xl glass-card border border-slate-200/80 space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">💻</span>
+                  <h3 className="font-display text-lg font-bold text-[#B45309] m-0">
+                    Technology &amp; Enterprise
+                  </h3>
+                </div>
+                <p className="font-accent text-sm text-[#334155] leading-loose m-0 font-medium">
+                  {techEnterpriseCompanies.join(" · ")}
+                </p>
+              </div>
+
+              {/* Media & Entertainment */}
+              <div className="p-6 sm:p-7 rounded-2xl glass-card border border-slate-200/80 space-y-3">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xl">🎬</span>
+                  <h3 className="font-display text-lg font-bold text-[#B45309] m-0">
+                    Media &amp; Entertainment
+                  </h3>
+                </div>
+                <p className="font-accent text-sm text-[#334155] leading-loose m-0 font-medium">
+                  {mediaEntertainmentCompanies.join(" · ")}
+                </p>
+              </div>
+            </div>
+
+            {/* Section 4: Today */}
+            <div className="space-y-4 p-8 rounded-3xl bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-amber-500/10 border border-amber-500/30 shadow-md">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-accent font-bold uppercase tracking-wider text-[#B45309]">
+                Present Focus
+              </div>
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#0F172A]">
+                Today
+              </h2>
+              <div className="space-y-4 text-[#475569] text-sm sm:text-base leading-relaxed">
+                <p>
+                  Today, Prakash continues to work across business, technology, media, and entertainment, combining his corporate experience with an entrepreneurial mindset.
+                </p>
+                <p>
+                  His focus remains on identifying opportunities, building strategic partnerships, supporting businesses and creators, technology consulting and turning ideas and changing circumstances into commercially meaningful outcomes.
+                </p>
+              </div>
+
+              <div className="pt-4 flex flex-wrap gap-4">
+                <Link
+                  href="/filmography"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline
+                    bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white shadow-[0_0_20px_rgba(217,119,6,0.35)] hover:scale-105 transition-all"
+                >
+                  View 120+ Filmography →
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-accent font-semibold text-xs uppercase tracking-wider no-underline
+                    bg-white hover:bg-slate-50 text-[#0F172A] border border-slate-200 shadow-sm transition-all"
+                >
+                  Connect With Prakash
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ BOTTOM CTA ═════════════════════════════════════════ */}
+      <section className="relative py-20 px-6 text-center border-t border-slate-200/80 bg-slate-50">
+        <div className="max-w-3xl mx-auto space-y-5">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0F172A]">
+            Ready to Explore Meaningful Partnerships?
+          </h2>
+          <p className="font-accent text-sm sm:text-base text-[#475569]">
+            Whether you are expanding your business footprint, seeking distribution consultancy, or launching an entertainment initiative—reach out directly.
+          </p>
+          <div className="pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 mt-2 px-7 py-3 rounded-full font-accent font-semibold text-sm no-underline
-                bg-gradient-to-r from-[#D4A832] to-[#F0C84A] text-[#0A0A0C]
-                shadow-[0_4px_20px_rgba(212,168,50,0.35)] hover:shadow-[0_8px_30px_rgba(212,168,50,0.5)]
-                hover:-translate-y-0.5 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline
+                bg-gradient-to-r from-[#F59E0B] via-[#D97706] to-[#B45309] text-white shadow-[0_4px_25px_rgba(217,119,6,0.35)] hover:shadow-[0_8px_35px_rgba(217,119,6,0.5)] hover:scale-105 transition-all duration-200"
             >
-              Work With Prakash →
+              Get In Touch →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative py-20 px-6 text-center overflow-hidden border-y border-[#D4A832]/15"
-        style={{ background: "linear-gradient(135deg, #12100C 0%, #1A1500 50%, #12100C 100%)" }}>
-        <div className="max-w-2xl mx-auto">
-          <h2 className="font-display text-4xl font-bold text-[#F0EDE8] mb-4">Ready to Collaborate?</h2>
-          <p className="text-[#A8A4A0] mb-8">Whether you're a writer, producer or brand — let's create something extraordinary.</p>
-          <Link href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-accent font-semibold text-sm no-underline
-              bg-gradient-to-r from-[#D4A832] to-[#F0C84A] text-[#0A0A0C]
-              shadow-[0_4px_20px_rgba(212,168,50,0.35)] hover:shadow-[0_8px_30px_rgba(212,168,50,0.5)] hover:-translate-y-0.5 transition-all duration-200">
-            Get In Touch
-          </Link>
-        </div>
-      </section>
     </>
   );
 }
+

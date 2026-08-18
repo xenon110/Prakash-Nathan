@@ -2,17 +2,56 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const contactDetails = [
-  { icon: "🏢", label: "Office", value: "4th floor, Wework, Chincholi bunder, Malad West 400 064" },
-  { icon: "✉️", label: "Email", value: "mail@prakashnathan.com", href: "mailto:mail@prakashnathan.com" },
-  { icon: "📸", label: "Instagram", value: "tinyurl.com/ybbaohrc", href: "https://tinyurl.com/ybbaohrc" },
-  { icon: "📘", label: "Facebook", value: "facebook.com/prakash.nathan", href: "https://www.facebook.com/prakash.nathan" },
-  { icon: "🎬", label: "IMDb", value: "imdb.to/1TcvxYt", href: "https://imdb.to/1TcvxYt" },
+const directChannels = [
+  {
+    icon: "✉️",
+    label: "Official Email",
+    value: "mail@prakashnathan.com",
+    href: "mailto:mail@prakashnathan.com",
+    tag: "Direct Inquiry",
+  },
+  {
+    icon: "📸",
+    label: "Instagram",
+    value: "@prakasshnathan",
+    href: "https://www.instagram.com/prakasshnathan/",
+    tag: "Social & Behind The Scenes",
+  },
+  {
+    icon: "🎬",
+    label: "IMDb Profile",
+    value: "Prakash Nathan on IMDb",
+    href: "https://www.imdb.com/name/nm3194009/",
+    tag: "Filmography & Credits",
+  },
+  {
+    icon: "🏢",
+    label: "Headquarters & Office",
+    value: "4th Floor, WeWork, Chincholi Bunder, Malad West, Mumbai 400 064",
+    tag: "Mumbai, India",
+  },
+];
+
+const expertisePillars = [
+  "Commercial Strategy & Business Growth",
+  "Film Marketing & Theatrical Distribution Consultancy",
+  "Content Incubation & Script Evaluation",
+  "Rights Monetisation & Multi-Territory Syndication",
+  "Media & Entertainment Technology Advisory",
+  "Studio & Brand Partnerships",
 ];
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    topic: "Business Strategy & Commercial Growth",
+    message: "",
+  });
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -20,143 +59,262 @@ export default function ContactPage() {
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-    }, 1500);
+    }, 1000);
   }
 
   return (
     <>
-      {/* Banner */}
-      <div className="relative pt-32 pb-14 px-6 bg-[#0A0A0C] border-b border-white/5 overflow-hidden">
-        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(212,168,50,0.06) 0%, transparent 70%)" }} />
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="flex items-center gap-2 text-xs text-[#6B6866] font-accent mb-5">
-            <Link href="/" className="no-underline hover:text-[#D4A832] transition-colors">Home</Link>
-            <span className="text-white/10">/</span>
-            <span>Contact</span>
+      {/* ══ HEADER BANNER ══════════════════════════════════════ */}
+      <div className="relative pt-36 pb-16 px-6 overflow-hidden border-b border-slate-200/80">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[110px] pointer-events-none" />
+        <div className="absolute top-1/3 left-10 w-[450px] h-[450px] bg-purple-500/15 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative z-10 space-y-4">
+          <div className="flex items-center gap-2 text-xs text-[#64748B] font-accent">
+            <Link href="/" className="no-underline text-[#64748B] hover:text-[#D97706] transition-colors">
+              Home
+            </Link>
+            <span className="text-slate-300">/</span>
+            <span className="text-[#B45309] font-medium">Contact</span>
           </div>
-          <div className="section-label">Let's Connect</div>
-          <h1 className="font-display text-5xl md:text-6xl font-bold leading-tight text-[#F0EDE8]">
-            Get In <span className="text-[#D4A832]">Touch</span>
+
+          <div className="section-label">Connect &amp; Collaborate</div>
+
+          <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.12]">
+            Let's Build Something <br />
+            <span className="text-gold-gradient">Impactful Together</span>
           </h1>
-          <p className="text-[#A8A4A0] text-lg mt-4 max-w-xl">
-            Have a film project, consulting need or collaboration in mind? Reach out and let's make it happen.
+
+          <p className="font-accent text-base sm:text-lg text-[#475569] max-w-2xl leading-relaxed">
+            Whether you represent a studio, enterprise brand, high-growth startup, or creative endeavor—reach out directly to explore strategic growth, distribution consultation, or investment collaborations.
           </p>
         </div>
       </div>
 
-      {/* Body */}
-      <section className="py-20 px-6 bg-[#0A0A0C]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.4fr] gap-14 items-start">
-
-          {/* Info */}
-          <div>
-            <div className="section-label">Contact Information</div>
-            <h2 className="font-display text-3xl font-bold mb-4 leading-snug">
-              Let's Build <span className="text-[#D4A832]">Something Great</span> Together
+      {/* ══ CONTACT CHANNELS & FORM ═════════════════════════════ */}
+      <section className="py-20 px-6 relative">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Left Column (Channels & Address) */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="section-label">Direct Channels</div>
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#0F172A]">
+              Get in Touch
             </h2>
-            <p className="text-[#A8A4A0] text-sm leading-loose mb-8">
-              Whether you're a first-time film producer, a writer with a great script, an established production house or a brand looking for entertainment partnerships — Prakash is always open to meaningful conversations.
+            <p className="font-accent text-sm text-[#475569] leading-relaxed">
+              Prakash is based in Mumbai, India, and actively advises clients and ventures globally across entertainment, technology, and commercial monetization.
             </p>
 
-            <div className="space-y-3 mb-8">
-              {contactDetails.map((d) => {
-                const inner = (
-                  <>
-                    <div className="w-10 h-10 rounded-xl bg-[#D4A832]/10 flex items-center justify-center text-lg shrink-0 group-hover:bg-[#D4A832]/20 transition-colors">
-                      {d.icon}
+            <div className="space-y-4 pt-2">
+              {directChannels.map((c) => {
+                const CardContent = (
+                  <div className="p-5 rounded-2xl glass-card-interactive border border-slate-200/90 flex items-start gap-4 group">
+                    <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                      {c.icon}
                     </div>
-                    <div>
-                      <div className="font-accent text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-[#6B6866] mb-0.5">{d.label}</div>
-                      <div className="text-[#F0EDE8] text-sm group-hover:text-[#D4A832] transition-colors">{d.value}</div>
+                    <div className="space-y-0.5 flex-1 min-w-0">
+                      <div className="flex items-center justify-between">
+                        <span className="font-accent text-[0.68rem] font-bold uppercase tracking-wider text-[#B45309]">
+                          {c.tag}
+                        </span>
+                        {c.href && (
+                          <span className="text-xs text-[#D97706] group-hover:translate-x-1 transition-transform font-bold">
+                            ↗
+                          </span>
+                        )}
+                      </div>
+                      <p className="font-display font-bold text-sm sm:text-base text-[#0F172A] group-hover:text-[#D97706] transition-colors m-0 truncate">
+                        {c.value}
+                      </p>
+                      <p className="font-accent text-xs text-[#64748B] m-0">
+                        {c.label}
+                      </p>
                     </div>
-                  </>
+                  </div>
                 );
 
-                const className = "group flex items-center gap-4 p-4 bg-[#16161C] border border-white/7 rounded-xl hover:border-[#D4A832]/30 hover:translate-x-1 transition-all duration-200 no-underline";
-
-                return d.href ? (
-                  <a key={d.label} href={d.href} target="_blank" rel="noopener noreferrer" className={className}>
-                    {inner}
+                return c.href ? (
+                  <a
+                    key={c.label}
+                    href={c.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block no-underline"
+                  >
+                    {CardContent}
                   </a>
                 ) : (
-                  <div key={d.label} className={className}>
-                    {inner}
-                  </div>
+                  <div key={c.label}>{CardContent}</div>
                 );
               })}
             </div>
 
-            <div className="p-5 bg-[#16161C] border border-white/7 rounded-xl">
-              <p className="text-[#A8A4A0] text-xs leading-loose m-0">
-                <span className="text-[#D4A832] font-semibold block mb-1">Areas of Collaboration:</span>
-                Film Marketing & Distribution · Content Development · Script Evaluation · Rights Syndication · Brand-Entertainment Partnerships · First-Time Producer Mentoring
-              </p>
+            {/* Key Domains */}
+            <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-3">
+              <h3 className="font-display font-bold text-sm text-[#B45309] m-0 uppercase tracking-wide">
+                Key Advisory &amp; Collaboration Domains
+              </h3>
+              <ul className="list-none p-0 m-0 space-y-2 font-accent text-xs text-[#334155]">
+                {expertisePillars.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="text-[#D97706] font-bold">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Form */}
-          <div className="bg-[#16161C] border border-white/7 rounded-2xl p-8">
-            <h3 className="font-display text-2xl font-semibold text-[#F0EDE8] mb-7">Send a Message</h3>
+          {/* Right Column (Inquiry Form) */}
+          <div className="lg:col-span-7">
+            <div className="p-8 sm:p-10 rounded-3xl glass-card border border-amber-500/30 shadow-[0_20px_50px_rgba(15,23,42,0.06)] relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
-            {submitted ? (
-              <div className="text-center py-10">
-                <div className="text-5xl mb-4">✅</div>
-                <h4 className="font-display text-2xl font-semibold text-[#F0EDE8] mb-2">Message Sent!</h4>
-                <p className="text-[#A8A4A0] text-sm">Thank you for reaching out. Prakash will get back to you shortly.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-2 gap-4">
-                  {["First Name", "Last Name"].map((label) => (
-                    <div key={label}>
-                      <label className="block font-accent text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#A8A4A0] mb-1.5">{label}</label>
-                      <input required placeholder={`Your ${label.toLowerCase()}`}
-                        className="w-full bg-[#111115] border border-white/7 rounded-xl text-[#F0EDE8] text-sm px-4 py-3
-                          outline-none focus:border-[#D4A832] focus:shadow-[0_0_0_3px_rgba(212,168,50,0.12)] transition-all duration-200 placeholder:text-[#6B6866]" />
+              <div className="relative z-10 space-y-6">
+                <div>
+                  <span className="font-accent text-xs font-bold uppercase tracking-[0.2em] text-[#B45309]">
+                    Send an Inquiry
+                  </span>
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#0F172A] mt-1">
+                    Start a Conversation
+                  </h2>
+                  <p className="font-accent text-sm text-[#475569]">
+                    Fill in your details below and our team will get back to you promptly.
+                  </p>
+                </div>
+
+                {submitted ? (
+                  <div className="p-8 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-center space-y-3 animate-in fade-in duration-300">
+                    <p className="text-4xl">✉️</p>
+                    <h3 className="font-display text-2xl font-bold text-[#0F172A]">
+                      Message Received!
+                    </h3>
+                    <p className="font-accent text-sm text-[#475569] max-w-md mx-auto leading-relaxed">
+                      Thank you for reaching out, <strong className="text-[#0F172A]">{formData.firstName}</strong>. We have received your inquiry regarding <strong className="text-[#B45309]">{formData.topic}</strong> and will respond shortly.
+                    </p>
+                    <button
+                      onClick={() => {
+                        setSubmitted(false);
+                        setFormData({
+                          firstName: "",
+                          lastName: "",
+                          email: "",
+                          phone: "",
+                          topic: "Business Strategy & Commercial Growth",
+                          message: "",
+                        });
+                      }}
+                      className="mt-4 px-6 py-2.5 rounded-full font-accent text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white cursor-pointer border-none shadow-sm"
+                    >
+                      Send Another Message
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label className="block font-accent text-xs font-bold uppercase tracking-wider text-[#334155]">
+                          First Name *
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          value={formData.firstName}
+                          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                          placeholder="e.g. Rahul"
+                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 outline-none shadow-sm"
+                        />
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <label className="block font-accent text-xs font-bold uppercase tracking-wider text-[#334155]">
+                          Last Name *
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          value={formData.lastName}
+                          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                          placeholder="e.g. Sharma"
+                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 outline-none shadow-sm"
+                        />
+                      </div>
                     </div>
-                  ))}
-                </div>
 
-                <div>
-                  <label className="block font-accent text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#A8A4A0] mb-1.5">Email Address</label>
-                  <input type="email" required placeholder="your@email.com"
-                    className="w-full bg-[#111115] border border-white/7 rounded-xl text-[#F0EDE8] text-sm px-4 py-3
-                      outline-none focus:border-[#D4A832] focus:shadow-[0_0_0_3px_rgba(212,168,50,0.12)] transition-all duration-200 placeholder:text-[#6B6866]" />
-                </div>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label className="block font-accent text-xs font-bold uppercase tracking-wider text-[#334155]">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          required
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          placeholder="e.g. rahul@company.com"
+                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 outline-none shadow-sm"
+                        />
+                      </div>
 
-                <div>
-                  <label className="block font-accent text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#A8A4A0] mb-1.5">Subject</label>
-                  <select required defaultValue=""
-                    className="w-full bg-[#111115] border border-white/7 rounded-xl text-[#F0EDE8] text-sm px-4 py-3
-                      outline-none focus:border-[#D4A832] focus:shadow-[0_0_0_3px_rgba(212,168,50,0.12)] transition-all duration-200">
-                    <option value="" disabled>Select a topic…</option>
-                    <option>Film Marketing Consultancy</option>
-                    <option>Content Development</option>
-                    <option>Distribution &amp; Release</option>
-                    <option>Rights Syndication</option>
-                    <option>Script Submission</option>
-                    <option>Business Partnership</option>
-                    <option>Other</option>
-                  </select>
-                </div>
+                      <div className="space-y-1.5">
+                        <label className="block font-accent text-xs font-bold uppercase tracking-wider text-[#334155]">
+                          Phone / WhatsApp (Optional)
+                        </label>
+                        <input
+                          type="tel"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          placeholder="+91 98765 43210"
+                          className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 outline-none shadow-sm"
+                        />
+                      </div>
+                    </div>
 
-                <div>
-                  <label className="block font-accent text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-[#A8A4A0] mb-1.5">Message</label>
-                  <textarea required rows={5} placeholder="Tell Prakash about your project or enquiry…"
-                    className="w-full bg-[#111115] border border-white/7 rounded-xl text-[#F0EDE8] text-sm px-4 py-3
-                      outline-none focus:border-[#D4A832] focus:shadow-[0_0_0_3px_rgba(212,168,50,0.12)] transition-all duration-200 placeholder:text-[#6B6866] resize-y" />
-                </div>
+                    <div className="space-y-1.5">
+                      <label className="block font-accent text-xs font-bold uppercase tracking-wider text-[#334155]">
+                        Subject / Discussion Topic *
+                      </label>
+                      <select
+                        value={formData.topic}
+                        onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
+                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 outline-none shadow-sm"
+                      >
+                        <option value="Business Strategy & Commercial Growth">Business Strategy &amp; Commercial Growth</option>
+                        <option value="Film Distribution & Marketing Consultancy">Film Distribution &amp; Marketing Consultancy</option>
+                        <option value="Rights Monetisation & Content Syndication">Rights Monetisation &amp; Content Syndication</option>
+                        <option value="Content Incubation & Script Evaluation">Content Incubation &amp; Script Evaluation</option>
+                        <option value="Media & Entertainment Tech Advisory">Media &amp; Entertainment Tech Advisory</option>
+                        <option value="Studio / Brand Strategic Alliance">Studio / Brand Strategic Alliance</option>
+                        <option value="General Executive Inquiry">General Executive Inquiry</option>
+                      </select>
+                    </div>
 
-                <button type="submit" disabled={loading}
-                  className="w-full py-3.5 rounded-full font-accent font-semibold text-sm
-                    bg-gradient-to-r from-[#D4A832] to-[#F0C84A] text-[#0A0A0C]
-                    shadow-[0_4px_20px_rgba(212,168,50,0.35)] hover:shadow-[0_8px_30px_rgba(212,168,50,0.5)]
-                    hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed border-none cursor-pointer">
-                  {loading ? "Sending…" : "Send Message →"}
-                </button>
-              </form>
-            )}
+                    <div className="space-y-1.5">
+                      <label className="block font-accent text-xs font-bold uppercase tracking-wider text-[#334155]">
+                        Message / Project Brief *
+                      </label>
+                      <textarea
+                        required
+                        rows={4}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        placeholder="Please share context regarding your organization, film project, or strategic goals..."
+                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 outline-none resize-none shadow-sm"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full py-4 rounded-xl font-accent font-bold text-xs uppercase tracking-wider text-white
+                        bg-gradient-to-r from-[#F59E0B] via-[#D97706] to-[#B45309] shadow-[0_4px_20px_rgba(217,119,6,0.35)]
+                        hover:shadow-[0_8px_30px_rgba(217,119,6,0.5)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer border-none disabled:opacity-50"
+                    >
+                      {loading ? "Transmitting..." : "Send Strategic Inquiry →"}
+                    </button>
+                  </form>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </section>
