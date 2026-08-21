@@ -193,12 +193,12 @@ const languageFilters = [
 ] as const;
 
 const langThemeColors: Record<string, { bg: string; text: string; border: string; gradient: string }> = {
-  Hindi: { bg: "bg-amber-500/10", text: "text-[#B45309]", border: "border-amber-500/25", gradient: "from-amber-600 to-amber-900" },
+  Hindi: { bg: "bg-blue-500/10", text: "text-[#1D4ED8]", border: "border-blue-500/25", gradient: "from-blue-700 to-slate-950" },
   English: { bg: "bg-sky-500/10", text: "text-sky-700", border: "border-sky-500/25", gradient: "from-sky-700 to-indigo-950" },
   Marathi: { bg: "bg-rose-500/10", text: "text-rose-700", border: "border-rose-500/25", gradient: "from-rose-700 to-red-950" },
-  Tamil: { bg: "bg-purple-500/10", text: "text-purple-700", border: "border-purple-500/25", gradient: "from-purple-700 to-slate-950" },
+  Tamil: { bg: "bg-indigo-500/10", text: "text-indigo-700", border: "border-indigo-500/25", gradient: "from-indigo-700 to-slate-950" },
   Malayalam: { bg: "bg-emerald-500/10", text: "text-emerald-700", border: "border-emerald-500/25", gradient: "from-emerald-700 to-teal-950" },
-  Punjabi: { bg: "bg-pink-500/10", text: "text-pink-700", border: "border-pink-500/25", gradient: "from-pink-700 to-rose-950" },
+  Punjabi: { bg: "bg-amber-500/10", text: "text-amber-700", border: "border-amber-500/25", gradient: "from-amber-700 to-orange-950" },
   "Multi-Language": { bg: "bg-orange-500/10", text: "text-orange-700", border: "border-orange-500/25", gradient: "from-orange-700 to-amber-950" },
 };
 
@@ -210,7 +210,7 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
     <div
       onClick={onSelect}
       className={\`group relative rounded-2xl overflow-hidden glass-card-interactive cursor-pointer border flex flex-col justify-between transition-all duration-300
-        \${film.highlight ? "border-amber-400/90 shadow-[0_8px_24px_rgba(245,158,11,0.14)] ring-1 ring-amber-300/40" : "border-slate-200/90 shadow-sm hover:border-slate-300"}\`}
+        \${film.highlight ? "border-blue-400/90 shadow-[0_8px_24px_rgba(29,78,216,0.12)] ring-1 ring-blue-300/40" : "border-slate-200/90 shadow-sm hover:border-blue-300"}\`}
     >
       {/* Poster Image Container */}
       <div className="relative aspect-[2/3] w-full overflow-hidden bg-slate-900">
@@ -232,7 +232,7 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
                 {film.lang}
               </span>
               {film.year && (
-                <span className="text-[0.7rem] font-accent text-amber-200 font-semibold">
+                <span className="text-[0.7rem] font-accent text-sky-200 font-semibold">
                   {film.year}
                 </span>
               )}
@@ -270,7 +270,7 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
 
         {/* Hover Inspect Icon */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none">
-          <div className="w-9 h-9 rounded-full bg-white/95 text-[#0F172A] flex items-center justify-center text-sm font-bold shadow-2xl scale-75 group-hover:scale-100 transition-transform">
+          <div className="w-9 h-9 rounded-full bg-white/95 text-[#1D4ED8] flex items-center justify-center text-sm font-bold shadow-2xl scale-75 group-hover:scale-100 transition-transform">
             🔍
           </div>
         </div>
@@ -282,7 +282,7 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
               {film.title}
             </h3>
             {film.year && (
-              <span className="font-accent text-[0.7rem] font-semibold text-amber-300 drop-shadow shrink-0">
+              <span className="font-accent text-[0.7rem] font-semibold text-sky-200 drop-shadow shrink-0">
                 {film.year}
               </span>
             )}
@@ -297,7 +297,7 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
             <strong className="text-[#0F172A] font-semibold">Role:</strong> {film.role}
           </p>
           {film.note && (
-            <p className="font-accent text-[0.68rem] text-[#B45309] mt-0.5 m-0 font-medium truncate">
+            <p className="font-accent text-[0.68rem] text-[#1D4ED8] mt-0.5 m-0 font-medium truncate">
               ✨ {film.note}
             </p>
           )}
@@ -305,7 +305,7 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
 
         <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between text-[0.68rem] font-accent text-[#64748B]">
           <span>Details</span>
-          <span className="text-[#D97706] font-bold group-hover:translate-x-0.5 transition-transform">→</span>
+          <span className="text-[#1D4ED8] font-bold group-hover:translate-x-0.5 transition-transform">→</span>
         </div>
       </div>
     </div>
@@ -341,22 +341,22 @@ export default function FilmographyPage() {
     <>
       {/* ══ HEADER BANNER ══════════════════════════════════════ */}
       <div className="relative pt-36 pb-16 px-6 overflow-hidden border-b border-slate-200/80">
-        <div className="absolute top-0 right-10 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[110px] pointer-events-none" />
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-purple-500/15 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-10 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[110px] pointer-events-none" />
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-sky-400/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10 space-y-4">
           <div className="flex items-center gap-2 text-xs text-[#64748B] font-accent">
-            <Link href="/" className="no-underline text-[#64748B] hover:text-[#D97706] transition-colors">
+            <Link href="/" className="no-underline text-[#64748B] hover:text-[#1D4ED8] transition-colors">
               Home
             </Link>
             <span className="text-slate-300">/</span>
-            <span className="text-[#B45309] font-medium">Filmography</span>
+            <span className="text-[#1D4ED8] font-medium">Filmography</span>
           </div>
 
           <div className="section-label">Cinema Legacy &amp; Posters</div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.12]">
-            Filmography &amp; <span className="text-gold-gradient">Releases</span>
+            Filmography &amp; <span className="text-royal-gradient">Releases</span>
           </h1>
 
           <p className="font-accent text-base sm:text-lg text-[#475569] max-w-3xl leading-relaxed">
@@ -366,13 +366,13 @@ export default function FilmographyPage() {
           {/* Quick Metrics */}
           <div className="flex flex-wrap gap-4 pt-2">
             <div className="px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm font-accent text-xs text-[#475569]">
-              <span className="text-[#B45309] font-bold text-sm">120+</span> Film Releases &amp; Posters
+              <span className="text-[#1D4ED8] font-bold text-sm">120+</span> Film Releases &amp; Posters
             </div>
             <div className="px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm font-accent text-xs text-[#475569]">
-              <span className="text-[#B45309] font-bold text-sm">6+</span> Languages
+              <span className="text-[#1D4ED8] font-bold text-sm">6+</span> Languages
             </div>
             <div className="px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm font-accent text-xs text-[#475569]">
-              <span className="text-[#B45309] font-bold text-sm">3</span> National Awards (Ventilator)
+              <span className="text-[#1D4ED8] font-bold text-sm">3</span> National Awards (Ventilator)
             </div>
           </div>
         </div>
@@ -390,7 +390,7 @@ export default function FilmographyPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search film title, role or year (e.g. PK, Avengers, Ventilator)..."
-                className="w-full bg-white border border-slate-200 rounded-2xl px-5 py-3.5 pl-11 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 outline-none shadow-sm"
+                className="w-full bg-white border border-slate-200 rounded-2xl px-5 py-3.5 pl-11 text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 outline-none shadow-sm"
               />
               <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-[#64748B]">
                 🔍
@@ -421,8 +421,8 @@ export default function FilmographyPage() {
                     className={\`px-4 py-2 rounded-full font-accent text-xs font-semibold tracking-wide whitespace-nowrap transition-all duration-200 cursor-pointer border
                       \${
                         active
-                          ? "bg-gradient-to-r from-[#F59E0B] via-[#D97706] to-[#B45309] text-white border-transparent shadow-[0_2px_12px_rgba(217,119,6,0.35)]"
-                          : "bg-white text-[#475569] border-slate-200 hover:border-amber-400 hover:text-[#0F172A] shadow-sm"
+                          ? "bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white border-transparent shadow-[0_2px_12px_rgba(29,78,216,0.35)]"
+                          : "bg-white text-[#475569] border-slate-200 hover:border-blue-300 hover:text-[#1D4ED8] shadow-sm"
                       }\`}
                   >
                     <span>{lang}</span>
@@ -444,7 +444,7 @@ export default function FilmographyPage() {
             <span>
               Showing <strong className="text-[#0F172A]">{filteredFilms.length}</strong> of {filmographyData.length} cinematic titles
             </span>
-            <span className="text-[#B45309] font-medium">Click any movie poster card for credits &amp; details</span>
+            <span className="text-[#1D4ED8] font-medium">Click any movie poster card for credits &amp; details</span>
           </div>
 
           {/* Films Poster Grid (Compact 2 to 6 columns) */}
@@ -468,7 +468,7 @@ export default function FilmographyPage() {
                   setSearchQuery("");
                   setSelectedLang("All");
                 }}
-                className="px-5 py-2 rounded-full font-accent text-xs font-semibold bg-[#D97706] text-white cursor-pointer border-none shadow-sm"
+                className="px-5 py-2 rounded-full font-accent text-xs font-semibold bg-[#1D4ED8] text-white cursor-pointer border-none shadow-sm"
               >
                 Reset Filters
               </button>
@@ -492,7 +492,7 @@ export default function FilmographyPage() {
             {/* Close Button */}
             <button
               onClick={() => setActiveModalFilm(null)}
-              className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-slate-900/80 text-white flex items-center justify-center cursor-pointer border-none shadow-md hover:bg-[#D97706] transition-colors"
+              className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-slate-900/80 text-white flex items-center justify-center cursor-pointer border-none shadow-md hover:bg-[#1D4ED8] transition-colors"
             >
               ✕
             </button>
@@ -507,10 +507,10 @@ export default function FilmographyPage() {
                   className="object-cover"
                 />
               ) : (
-                <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-amber-600 to-slate-900 text-white">
+                <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-blue-700 to-slate-900 text-white">
                   <span className="text-5xl mb-3">🎬</span>
                   <h3 className="font-display text-2xl font-bold">{activeModalFilm.title}</h3>
-                  <p className="font-accent text-xs text-amber-200 mt-2">{activeModalFilm.lang} Cinema</p>
+                  <p className="font-accent text-xs text-sky-200 mt-2">{activeModalFilm.lang} Cinema</p>
                 </div>
               )}
             </div>
@@ -519,7 +519,7 @@ export default function FilmographyPage() {
             <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-xs font-accent font-bold uppercase tracking-wider text-[#B45309]">
+                  <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-accent font-bold uppercase tracking-wider text-[#1D4ED8]">
                     {activeModalFilm.lang}
                   </span>
                   {activeModalFilm.year && (
@@ -534,7 +534,7 @@ export default function FilmographyPage() {
                 </h2>
 
                 {activeModalFilm.highlight && (
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-xs font-accent font-bold text-[#B45309]">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-xs font-accent font-bold text-[#D97706]">
                     ⭐ Landmark Release / Award Recognition
                   </div>
                 )}
@@ -560,7 +560,7 @@ export default function FilmographyPage() {
                   href="/contact"
                   onClick={() => setActiveModalFilm(null)}
                   className="px-5 py-2.5 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline
-                    bg-gradient-to-r from-[#F59E0B] via-[#D97706] to-[#B45309] text-white shadow-sm"
+                    bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white shadow-sm"
                 >
                   Consult On Similar Projects →
                 </Link>
@@ -584,7 +584,7 @@ export default function FilmographyPage() {
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline
-                bg-gradient-to-r from-[#F59E0B] via-[#D97706] to-[#B45309] text-white shadow-[0_4px_25px_rgba(217,119,6,0.35)] hover:shadow-[0_8px_35px_rgba(217,119,6,0.5)] hover:scale-105 transition-all duration-200"
+                bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white shadow-[0_4px_25px_rgba(29,78,216,0.35)] hover:shadow-[0_8px_35px_rgba(29,78,216,0.5)] hover:scale-105 transition-all duration-200"
             >
               Get In Touch →
             </Link>
@@ -597,4 +597,6 @@ export default function FilmographyPage() {
 `;
 
 fs.writeFileSync(path.join(__dirname, '..', 'app', 'filmography', 'page.tsx'), tsContent);
+
 console.log('Successfully updated app/filmography/page.tsx with compact cards and responsive 5-6 column grid!');
+

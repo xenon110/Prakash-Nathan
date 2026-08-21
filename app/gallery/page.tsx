@@ -125,29 +125,29 @@ export default function GalleryPage() {
     <>
       {/* ══ HEADER BANNER ══════════════════════════════════════ */}
       <div className="relative pt-36 pb-16 px-6 overflow-hidden border-b border-slate-200/80">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[110px] pointer-events-none" />
-        <div className="absolute top-1/3 left-10 w-[450px] h-[450px] bg-purple-500/15 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[110px] pointer-events-none" />
+        <div className="absolute top-1/3 left-10 w-[450px] h-[450px] bg-sky-400/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10 space-y-4">
           <div className="flex items-center gap-2 text-xs text-[#64748B] font-accent">
-            <Link href="/" className="no-underline text-[#64748B] hover:text-[#D97706] transition-colors">
+            <Link href="/" className="no-underline text-[#64748B] hover:text-[#1D4ED8] transition-colors">
               Home
             </Link>
             <span className="text-slate-300">/</span>
-            <span className="text-[#B45309] font-medium">Gallery</span>
+            <span className="text-[#1D4ED8] font-medium">Gallery</span>
           </div>
 
           <div className="section-label">Moments &amp; Associations</div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.12]">
-            Industry Moments &amp; <span className="text-gold-gradient">Gallery</span>
+            Industry Moments &amp; <span className="text-royal-gradient">Gallery</span>
           </h1>
 
           <p className="font-accent text-base sm:text-lg text-[#475569] max-w-3xl leading-relaxed">
             A visual retrospective of relationships, landmark film events, studio collaborations, and memorable moments with celebrated actors, visionary directors, and industry leaders over three decades.
           </p>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/25 font-accent text-xs text-[#B45309]">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200/80 font-accent text-xs text-[#1D4ED8]">
             <span>✨ Click any photo to view in Fullscreen Lightbox &amp; Slideshow Mode</span>
           </div>
         </div>
@@ -173,8 +173,8 @@ export default function GalleryPage() {
                     className={`px-4 py-2 rounded-full font-accent text-xs font-semibold tracking-wide whitespace-nowrap transition-all duration-200 cursor-pointer border
                       ${
                         active
-                          ? "bg-gradient-to-r from-[#F59E0B] via-[#D97706] to-[#B45309] text-white border-transparent shadow-[0_2px_12px_rgba(217,119,6,0.35)]"
-                          : "bg-white text-[#475569] border-slate-200 hover:border-amber-400 hover:text-[#0F172A] shadow-sm"
+                          ? "bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white border-transparent shadow-[0_2px_12px_rgba(29,78,216,0.35)]"
+                          : "bg-white text-[#475569] border-slate-200 hover:border-blue-300 hover:text-[#1D4ED8] shadow-sm"
                       }`}
                   >
                     <span>{cat}</span>
@@ -197,7 +197,7 @@ export default function GalleryPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search celebrity / event..."
-                className="w-full bg-white border border-slate-200 rounded-2xl px-4 py-2.5 pl-10 text-xs text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#D97706] focus:ring-2 focus:ring-[#D97706]/20 outline-none shadow-sm"
+                className="w-full bg-white border border-slate-200 rounded-2xl px-4 py-2.5 pl-10 text-xs text-[#0F172A] placeholder:text-[#94A3B8] focus:border-[#1D4ED8] focus:ring-2 focus:ring-[#1D4ED8]/20 outline-none shadow-sm"
               />
               <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-xs text-[#64748B]">🔍</span>
               {searchQuery && (
@@ -215,7 +215,7 @@ export default function GalleryPage() {
             <span>
               Showing <strong className="text-[#0F172A]">{filteredItems.length}</strong> photographs
             </span>
-            <span className="text-[#B45309] font-medium">Click any card to inspect in high definition</span>
+            <span className="text-[#1D4ED8] font-medium">Click any card to inspect in high definition</span>
           </div>
 
           {filteredItems.length > 0 ? (
@@ -224,7 +224,7 @@ export default function GalleryPage() {
                 <div
                   key={`${item.name}-${index}`}
                   onClick={() => openLightbox(index)}
-                  className="group relative rounded-3xl overflow-hidden glass-card-interactive cursor-pointer border border-slate-200/90 shadow-sm hover:shadow-[0_20px_35px_-5px_rgba(217,119,6,0.2)] flex flex-col justify-between"
+                  className="group relative rounded-3xl overflow-hidden glass-card-interactive cursor-pointer border border-slate-200/90 shadow-sm hover:shadow-[0_20px_35px_-5px_rgba(29,78,216,0.12)] flex flex-col justify-between"
                 >
                   {/* Photo Container */}
                   <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-100">
@@ -240,17 +240,17 @@ export default function GalleryPage() {
 
                     {/* Magnify Icon */}
                     <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
-                      <span className="text-xs text-[#0F172A]">🔍</span>
+                      <span className="text-xs text-[#1D4ED8]">🔍</span>
                     </div>
 
-                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-[0.65rem] font-accent font-bold uppercase tracking-wider text-[#B45309] shadow-sm">
+                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-[0.65rem] font-accent font-bold uppercase tracking-wider text-[#1D4ED8] shadow-sm">
                       {item.category}
                     </div>
                   </div>
 
                   {/* Caption Strip */}
                   <div className="p-3.5 bg-white border-t border-slate-100">
-                    <h3 className="font-display font-bold text-sm sm:text-base text-[#0F172A] truncate group-hover:text-[#D97706] transition-colors m-0">
+                    <h3 className="font-display font-bold text-sm sm:text-base text-[#0F172A] truncate group-hover:text-[#1D4ED8] transition-colors m-0">
                       {item.name}
                     </h3>
                     {item.note && (
@@ -272,7 +272,7 @@ export default function GalleryPage() {
                   setSearchQuery("");
                   setSelectedCategory("All");
                 }}
-                className="px-5 py-2 rounded-full font-accent text-xs font-semibold bg-[#D97706] text-white cursor-pointer border-none shadow-sm"
+                className="px-5 py-2 rounded-full font-accent text-xs font-semibold bg-[#1D4ED8] text-white cursor-pointer border-none shadow-sm"
               >
                 Reset Search
               </button>
@@ -296,7 +296,7 @@ export default function GalleryPage() {
           >
             <div className="space-y-0.5">
               <div className="flex items-center gap-2">
-                <span className="font-accent text-xs text-[#F59E0B] font-bold uppercase tracking-wider">
+                <span className="font-accent text-xs text-[#60A5FA] font-bold uppercase tracking-wider">
                   {currentItem.category}
                 </span>
                 <span className="text-white/30">|</span>
@@ -308,7 +308,7 @@ export default function GalleryPage() {
                 {currentItem.name}
               </h2>
               {currentItem.note && (
-                <p className="font-accent text-xs text-amber-200 m-0">
+                <p className="font-accent text-xs text-blue-200 m-0">
                   {currentItem.note}
                 </p>
               )}
@@ -321,7 +321,7 @@ export default function GalleryPage() {
                 className={`px-3.5 py-1.5 rounded-full font-accent text-xs font-semibold border cursor-pointer transition-colors
                   ${
                     isPlaying
-                      ? "bg-[#F59E0B] text-black border-[#F59E0B] shadow-[0_0_15px_rgba(245,158,11,0.5)]"
+                      ? "bg-[#1D4ED8] text-white border-[#1D4ED8] shadow-[0_0_15px_rgba(29,78,216,0.5)]"
                       : "bg-white/10 text-white border-white/20 hover:bg-white/20"
                   }`}
               >
@@ -345,7 +345,7 @@ export default function GalleryPage() {
             {/* Left Nav Arrow */}
             <button
               onClick={prevImage}
-              className="absolute left-2 sm:left-6 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-[#F59E0B] text-white hover:text-black border border-white/20 flex items-center justify-center text-xl cursor-pointer transition-all duration-200 shadow-2xl"
+              className="absolute left-2 sm:left-6 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-[#1D4ED8] text-white border border-white/20 flex items-center justify-center text-xl cursor-pointer transition-all duration-200 shadow-2xl"
               aria-label="Previous photograph"
             >
               ←
@@ -367,7 +367,7 @@ export default function GalleryPage() {
             {/* Right Nav Arrow */}
             <button
               onClick={nextImage}
-              className="absolute right-2 sm:right-6 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-[#F59E0B] text-white hover:text-black border border-white/20 flex items-center justify-center text-xl cursor-pointer transition-all duration-200 shadow-2xl"
+              className="absolute right-2 sm:right-6 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-[#1D4ED8] text-white border border-white/20 flex items-center justify-center text-xl cursor-pointer transition-all duration-200 shadow-2xl"
               aria-label="Next photograph"
             >
               →
@@ -387,7 +387,7 @@ export default function GalleryPage() {
                   className={`relative w-14 h-14 rounded-lg overflow-hidden shrink-0 border-2 transition-all cursor-pointer p-0 bg-transparent
                     ${
                       idx === lightboxIndex
-                        ? "border-[#F59E0B] scale-110 shadow-[0_0_15px_rgba(245,158,11,0.6)]"
+                        ? "border-[#1D4ED8] scale-110 shadow-[0_0_15px_rgba(29,78,216,0.6)]"
                         : "border-transparent opacity-50 hover:opacity-100"
                     }`}
                 >

@@ -24,7 +24,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased min-h-screen flex flex-col relative bg-[#F8FAFC] text-[#0F172A] selection:bg-[#F59E0B]/25 selection:text-[#0F172A]">
+      <body className="antialiased min-h-screen flex flex-col relative bg-[#F8FAFC] text-[#0F172A] selection:bg-[#1D4ED8]/20 selection:text-[#1D4ED8]">
         {/* Global Ambient Glows (Luminous Colorful Aurora) */}
         <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10 bg-grid-pattern">
           <div className="aurora-glow-1" />

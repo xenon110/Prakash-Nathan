@@ -39,12 +39,12 @@ export const CircularTestimonials = ({
   autoplay = true,
   colors = {},
 }: CircularTestimonialsProps) => {
-  const colorName        = colors.name              ?? "#F0EDE8";
-  const colorDesignation = colors.designation       ?? "#D4A832";
-  const colorTestimony   = colors.testimony         ?? "#A8A4A0";
-  const colorArrowBg     = colors.arrowBackground   ?? "#1C1C22";
-  const colorArrowFg     = colors.arrowForeground   ?? "#F0EDE8";
-  const colorArrowHoverBg = colors.arrowHoverBackground ?? "#D4A832";
+  const colorName        = colors.name              ?? "#0F172A";
+  const colorDesignation = colors.designation       ?? "#1D4ED8";
+  const colorTestimony   = colors.testimony         ?? "#475569";
+  const colorArrowBg     = colors.arrowBackground   ?? "#F1F5F9";
+  const colorArrowFg     = colors.arrowForeground   ?? "#0F172A";
+  const colorArrowHoverBg = colors.arrowHoverBackground ?? "#1D4ED8";
 
   const [activeIndex, setActiveIndex] = useState(0);
   const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -88,17 +88,16 @@ export const CircularTestimonials = ({
     <div className="w-full max-w-xl mx-auto">
       {/* Card */}
       <div
-        className="relative rounded-2xl overflow-hidden"
+        className="relative rounded-2xl overflow-hidden glass-card bg-white/95"
         style={{
-          background: "linear-gradient(135deg, #16161C 0%, #1C1C24 100%)",
-          border: "1px solid rgba(212,168,50,0.15)",
-          boxShadow: "0 8px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04)",
+          border: "1px solid rgba(226, 232, 240, 0.9)",
+          boxShadow: "0 10px 30px -5px rgba(29, 78, 216, 0.07), 0 4px 6px -2px rgba(15, 23, 42, 0.03)",
         }}
       >
-        {/* Gold shimmer line at top */}
+        {/* Top gradient line with Royal Blue & Sky */}
         <div
-          className="absolute top-0 left-0 right-0 h-px"
-          style={{ background: "linear-gradient(90deg, transparent, #D4A832 50%, transparent)" }}
+          className="absolute top-0 left-0 right-0 h-[2px]"
+          style={{ background: "linear-gradient(90deg, #1D4ED8 0%, #38BDF8 50%, #F59E0B 100%)" }}
         />
 
         <div className="p-7">
@@ -113,12 +112,10 @@ export const CircularTestimonials = ({
               {/* Logo + meta row */}
               <div className="flex items-center gap-4 mb-5">
                 <div
-                  className="shrink-0 rounded-xl flex items-center justify-center"
+                  className="shrink-0 rounded-xl flex items-center justify-center bg-slate-50 border border-slate-200/80 shadow-sm"
                   style={{
                     width: 56,
                     height: 56,
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.08)",
                   }}
                 >
                   <img
@@ -131,7 +128,7 @@ export const CircularTestimonials = ({
                   <p
                     style={{
                       color: colorName,
-                      fontSize: "1rem",
+                      fontSize: "1.05rem",
                       fontFamily: "'Playfair Display', serif",
                       fontWeight: 700,
                       marginBottom: 2,
@@ -143,9 +140,10 @@ export const CircularTestimonials = ({
                   <p
                     style={{
                       color: colorDesignation,
-                      fontSize: "0.68rem",
+                      fontSize: "0.72rem",
                       fontFamily: "'Outfit', sans-serif",
-                      letterSpacing: "0.06em",
+                      fontWeight: 600,
+                      letterSpacing: "0.08em",
                       textTransform: "uppercase",
                       lineHeight: 1.4,
                     }}
@@ -155,13 +153,13 @@ export const CircularTestimonials = ({
                 </div>
               </div>
 
-              {/* Open-quote glyph */}
+              {/* Open-quote glyph in Royal Blue / Sky tint */}
               <div
                 style={{
-                  color: "#D4A832",
-                  fontSize: "2rem",
+                  color: "#1D4ED8",
+                  fontSize: "2.2rem",
                   fontFamily: "Georgia, serif",
-                  opacity: 0.45,
+                  opacity: 0.35,
                   lineHeight: 1,
                   marginBottom: 6,
                   userSelect: "none",
@@ -174,7 +172,7 @@ export const CircularTestimonials = ({
               <p
                 style={{
                   color: colorTestimony,
-                  fontSize: "0.88rem",
+                  fontSize: "0.92rem",
                   lineHeight: 1.75,
                 }}
               >
@@ -186,7 +184,7 @@ export const CircularTestimonials = ({
           {/* Footer: dots + arrows */}
           <div
             className="flex items-center justify-between mt-6 pt-5"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
+            style={{ borderTop: "1px solid rgba(226, 232, 240, 0.8)" }}
           >
             {/* Pill dots */}
             <div className="flex items-center gap-1.5">
@@ -196,14 +194,14 @@ export const CircularTestimonials = ({
                   onClick={() => { setActiveIndex(i); restartAutoplay(); }}
                   aria-label={`Go to brand ${i + 1}`}
                   style={{
-                    width: i === activeIndex ? 18 : 5,
-                    height: 5,
+                    width: i === activeIndex ? 18 : 6,
+                    height: 6,
                     borderRadius: 999,
                     border: "none",
                     cursor: "pointer",
                     padding: 0,
                     transition: "all 0.3s ease",
-                    background: i === activeIndex ? "#D4A832" : "rgba(255,255,255,0.15)",
+                    background: i === activeIndex ? "#1D4ED8" : "rgba(148, 163, 184, 0.4)",
                   }}
                 />
               ))}
@@ -222,10 +220,11 @@ export const CircularTestimonials = ({
       <p
         className="text-center mt-3"
         style={{
-          color: "rgba(255,255,255,0.18)",
-          fontSize: "0.68rem",
+          color: "#94A3B8",
+          fontSize: "0.72rem",
           fontFamily: "'Outfit', sans-serif",
           letterSpacing: "0.1em",
+          fontWeight: 600,
         }}
       >
         {String(activeIndex + 1).padStart(2, "0")} / {String(testimonialsLength).padStart(2, "0")}
@@ -253,15 +252,15 @@ function CompactArrow({
         width: 32,
         height: 32,
         borderRadius: "50%",
-        border: "1px solid rgba(255,255,255,0.08)",
+        border: "1px solid rgba(203, 213, 225, 0.8)",
         background: hov ? hover : bg,
-        color: hov ? "#0A0A0C" : fg,
+        color: hov ? "#FFFFFF" : fg,
         cursor: "pointer",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         transition: "all 0.2s ease",
-        transform: hov ? "scale(1.1)" : "scale(1)",
+        transform: hov ? "scale(1.08)" : "scale(1)",
         padding: 0,
         flexShrink: 0,
       }}

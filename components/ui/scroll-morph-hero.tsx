@@ -56,7 +56,7 @@ function FlipCard({
             >
                 {/* Front Face */}
                 <div
-                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.5)] border border-white/5 bg-[#16161C]"
+                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-[0_8px_25px_rgba(15,23,42,0.1)] border border-slate-200/80 bg-white"
                     style={{ backfaceVisibility: "hidden" }}
                 >
                     <img
@@ -64,17 +64,17 @@ function FlipCard({
                         alt={`gallery-${index}`}
                         className="h-full w-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-transparent" />
+                    <div className="absolute inset-0 bg-slate-900/5 transition-colors group-hover:bg-transparent" />
                 </div>
 
                 {/* Back Face */}
                 <div
-                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-lg bg-[#111115] flex flex-col items-center justify-center p-4 border border-[#D4A832]/30"
+                    className="absolute inset-0 h-full w-full overflow-hidden rounded-xl shadow-lg bg-gradient-to-br from-blue-50 via-white to-slate-50 flex flex-col items-center justify-center p-4 border border-blue-200"
                     style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
                 >
                     <div className="text-center">
-                        <p className="text-[9px] font-accent font-bold text-[#D4A832] uppercase tracking-widest mb-1">View</p>
-                        <p className="text-xs font-display font-semibold text-[#F0EDE8]">Details</p>
+                        <p className="text-[9px] font-accent font-bold text-[#1D4ED8] uppercase tracking-widest mb-1">View</p>
+                        <p className="text-xs font-display font-bold text-[#0F172A]">Details</p>
                     </div>
                 </div>
             </motion.div>
@@ -257,7 +257,7 @@ export default function ScrollMorphGallery() {
     const contentY = useTransform(smoothMorph, [0.8, 1], [20, 0]);
 
     return (
-        <div ref={containerRef} className="relative w-full h-full bg-[#0A0A0C] overflow-hidden rounded-3xl border border-white/5">
+        <div ref={containerRef} className="relative w-full h-full bg-gradient-to-b from-blue-50/40 via-white to-slate-50 overflow-hidden rounded-3xl border border-slate-200/80 shadow-[0_10px_30px_rgba(29,78,216,0.04)]">
             <div className="flex h-full w-full flex-col items-center justify-center perspective-1000">
 
                 {/* Intro Text */}
@@ -266,7 +266,7 @@ export default function ScrollMorphGallery() {
                         initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                         animate={introPhase === "circle" && morphValue < 0.5 ? { opacity: 1 - morphValue * 2, y: 0, filter: "blur(0px)" } : { opacity: 0, filter: "blur(10px)" }}
                         transition={{ duration: 1 }}
-                        className="font-display text-3xl md:text-5xl font-bold tracking-tight text-[#F0EDE8]"
+                        className="font-display text-3xl md:text-5xl font-bold tracking-tight text-[#0F172A]"
                     >
                         A Cinematic Journey
                     </motion.h1>
@@ -274,7 +274,7 @@ export default function ScrollMorphGallery() {
                         initial={{ opacity: 0 }}
                         animate={introPhase === "circle" && morphValue < 0.5 ? { opacity: 0.8 - morphValue } : { opacity: 0 }}
                         transition={{ duration: 1, delay: 0.2 }}
-                        className="mt-5 font-accent text-xs font-bold tracking-[0.3em] text-[#D4A832]"
+                        className="mt-5 font-accent text-xs font-bold tracking-[0.3em] text-[#1D4ED8]"
                     >
                         SCROLL TO EXPLORE
                     </motion.p>
@@ -284,10 +284,10 @@ export default function ScrollMorphGallery() {
                     style={{ opacity: contentOpacity, y: contentY }}
                     className="absolute top-[2%] z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4"
                 >
-                    <h2 className="font-display text-4xl md:text-5xl font-bold text-[#F0EDE8] mb-5">
-                        Moments in <span className="text-[#D4A832]">Focus</span>
+                    <h2 className="font-display text-4xl md:text-5xl font-bold text-[#0F172A] mb-5">
+                        Moments in <span className="text-[#1D4ED8]">Focus</span>
                     </h2>
-                    <p className="font-accent text-sm md:text-base text-[#A8A4A0] max-w-lg leading-relaxed">
+                    <p className="font-accent text-sm md:text-base text-[#475569] max-w-lg leading-relaxed">
                         Scroll through a curated collection of behind-the-scenes moments, <br className="hidden md:block" />
                         film premieres, and industry milestones.
                     </p>
