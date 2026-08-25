@@ -8,46 +8,20 @@ export const metadata: Metadata = {
     "Building Businesses. Creating Opportunities. Navigating Change. Over three decades of experience across Technology, Media, Entertainment, and Entrepreneurship.",
 };
 
-const techEnterpriseCompanies = [
-  "Ambuja Cements",
-  "Sony",
-  "Xerox",
-  "Videocon",
-  "Moser Baer",
-  "Galaxy Office Automation",
-  "Wysetek Systems",
-  "Unique Solutions",
-];
-
-const mediaEntertainmentCompanies = [
-  "UTV",
-  "Disney",
-  "Ultra Media & Entertainment",
-  "Eagle Eye Entertainment",
-  "CineMarkets Digital Solutions",
-];
-
-const pillars = [
-  {
-    title: "Commercial Growth",
-    desc: "Transforming ideas into resilient, revenue-generating commercial ventures.",
-    accent: "#1D4ED8",
-  },
-  {
-    title: "Strategic Partnerships",
-    desc: "Forging synergistic alliances across studios, platforms, and technology leaders.",
-    accent: "#E03E2D",
-  },
-  {
-    title: "Content & Rights",
-    desc: "Maximizing the full commercial lifecycle through distribution and syndication.",
-    accent: "#F59E0B",
-  },
-  {
-    title: "Technology Consulting",
-    desc: "Empowering content with digital capabilities, marketing tech, and innovation.",
-    accent: "#0284C7",
-  },
+const companies = [
+  { name: "Disney", logo: "/assets/brands/disney.png", category: "Global Studio", type: "Media & Entertainment" },
+  { name: "UTV", logo: "/assets/brands/utv.png", category: "Motion Pictures", type: "Media & Entertainment" },
+  { name: "Sony", logo: "/assets/brands/sony.png", category: "Electronics & Media", type: "Technology & Enterprise" },
+  { name: "Xerox", logo: "/assets/brands/xerox.png", category: "Enterprise Solutions", type: "Technology & Enterprise" },
+  { name: "Ambuja Cements", logo: "/assets/brands/ambuja.png", category: "Building & Materials", type: "Technology & Enterprise" },
+  { name: "Videocon", logo: "/assets/brands/videocon.png", category: "Consumer Goods", type: "Technology & Enterprise" },
+  { name: "Moser Baer", logo: "/assets/brands/moserbaer.png", category: "Entertainment & Media", type: "Technology & Enterprise" },
+  { name: "Eagle Eye Entertainment", logo: "/assets/brands/eagleeye.png", category: "Content & Distribution", type: "Media & Entertainment" },
+  { name: "Ultra Media & Entertainment", logo: "/assets/brands/ultra.png", category: "Media Rights", type: "Media & Entertainment" },
+  { name: "CineMarkets", logo: "/assets/brands/cinemarkets.jpg", category: "Digital Solutions", type: "Media & Entertainment" },
+  { name: "Galaxy Office Automation", logo: "/assets/brands/galaxy.png", category: "IT Infrastructure", type: "Technology & Enterprise" },
+  { name: "Unique Solutions", logo: "/assets/brands/unique_solutions.png", category: "Enterprise Tech", type: "Technology & Enterprise" },
+  { name: "Wysetek Systems", logo: "/assets/brands/wysetek.png", category: "Systems Integration", type: "Technology & Enterprise" },
 ];
 
 export default function AboutPage() {
@@ -85,10 +59,10 @@ export default function AboutPage() {
       {/* ══ MAIN PROFILE BODY ══════════════════════════════════ */}
       <section className="py-20 px-6 relative">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column (Sticky Portrait & Pillars) */}
+          {/* Left Column (Sticky Portrait) */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
             <div className="relative group rounded-3xl p-3 glass-card border border-white/90 shadow-[0_20px_50px_rgba(15,23,42,0.1)] overflow-hidden">
-              <div className="relative h-[440px] sm:h-[500px] w-full rounded-2xl overflow-hidden shadow-inner">
+              <div className="relative h-[460px] sm:h-[520px] w-full rounded-2xl overflow-hidden shadow-inner">
                 <Image
                   src="/assets/portrait.jpg"
                   alt="Prakash Nathan"
@@ -103,16 +77,6 @@ export default function AboutPage() {
                   <p className="font-accent text-xs text-[#1D4ED8] font-semibold m-0">30+ Years Leadership in Tech &amp; Entertainment</p>
                 </div>
               </div>
-            </div>
-
-            {/* Strategic Strengths */}
-            <div className="grid grid-cols-2 gap-3">
-              {pillars.map((item) => (
-                <div key={item.title} className="p-4 rounded-2xl glass-card border border-slate-200/80 space-y-1">
-                  <p className="font-display font-bold text-sm m-0" style={{ color: item.accent }}>{item.title}</p>
-                  <p className="font-accent text-xs text-[#64748B] leading-snug m-0">{item.desc}</p>
-                </div>
-              ))}
             </div>
           </div>
 
@@ -162,7 +126,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Section 3: Experience Across Industries */}
+            {/* Section 3: Experience Across Industries with Home Page Scrolling Ticker */}
             <div className="space-y-6">
               <div>
                 <div className="section-label">Industry Breadth</div>
@@ -171,30 +135,53 @@ export default function AboutPage() {
                 </h2>
               </div>
 
-              {/* Technology & Enterprise */}
-              <div className="p-6 sm:p-7 rounded-2xl glass-card border border-slate-200/80 space-y-3">
-                <div className="flex items-center gap-2.5">
-                  <span className="text-xl">💻</span>
-                  <h3 className="font-display text-lg font-bold text-[#1D4ED8] m-0">
-                    Technology &amp; Enterprise
-                  </h3>
+              {/* Scrolling Ticker Marquee (From Home Page) */}
+              <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm overflow-hidden">
+                <div className="brands-track items-center">
+                  {[...companies, ...companies].map((co, idx) => (
+                    <div
+                      key={`${co.name}-${idx}`}
+                      className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-slate-100/80 border border-slate-200 shrink-0"
+                    >
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#1D4ED8]" />
+                      <span className="font-accent text-xs font-bold text-[#334155] tracking-wider uppercase whitespace-nowrap">
+                        {co.name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-                <p className="font-accent text-sm text-[#334155] leading-loose m-0 font-medium">
-                  {techEnterpriseCompanies.join(" · ")}
-                </p>
               </div>
 
-              {/* Media & Entertainment */}
-              <div className="p-6 sm:p-7 rounded-2xl glass-card border border-slate-200/80 space-y-3">
-                <div className="flex items-center gap-2.5">
-                  <span className="text-xl">🎬</span>
-                  <h3 className="font-display text-lg font-bold text-[#E03E2D] m-0">
-                    Media &amp; Entertainment
-                  </h3>
-                </div>
-                <p className="font-accent text-sm text-[#334155] leading-loose m-0 font-medium">
-                  {mediaEntertainmentCompanies.join(" · ")}
-                </p>
+              {/* Grid of Company Badges with Brand Logos */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-2">
+                {companies.map((co) => (
+                  <div
+                    key={co.name}
+                    className="group relative p-4 rounded-2xl glass-card-interactive flex flex-col items-center justify-center text-center h-32"
+                  >
+                    {co.logo ? (
+                      <div className="relative h-10 w-28 flex items-center justify-center mb-1.5">
+                        <Image
+                          src={co.logo}
+                          alt={co.name}
+                          width={110}
+                          height={40}
+                          className="max-h-10 max-w-[110px] w-auto h-auto object-contain filter group-hover:scale-105 transition-all duration-300"
+                        />
+                      </div>
+                    ) : (
+                      <div className="h-10 flex items-center justify-center mb-1.5">
+                        <span className="font-display font-bold text-base text-[#0F172A] group-hover:text-[#1D4ED8] transition-colors">
+                          {co.name}
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="text-[0.68rem] font-accent uppercase tracking-wider text-[#64748B] group-hover:text-[#1D4ED8] transition-colors font-medium">
+                      {co.category}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -260,3 +247,4 @@ export default function AboutPage() {
     </>
   );
 }
+
