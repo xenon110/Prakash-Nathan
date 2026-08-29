@@ -227,23 +227,32 @@ export default function GalleryPage() {
                   className="group relative rounded-3xl overflow-hidden glass-card-interactive cursor-pointer border border-slate-200/90 shadow-sm hover:shadow-[0_20px_35px_-5px_rgba(29,78,216,0.12)] flex flex-col justify-between"
                 >
                   {/* Photo Container */}
-                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-100">
+                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
+                    {/* Ambient Blurred Background Fill */}
+                    <Image
+                      src={item.src}
+                      alt=""
+                      fill
+                      className="object-cover blur-md scale-110 opacity-40 pointer-events-none"
+                      aria-hidden="true"
+                    />
+                    {/* Main Image contained 100% inside the card box */}
                     <Image
                       src={item.src}
                       alt={item.name}
                       fill
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                      className="object-cover object-top group-hover:scale-108 transition-transform duration-500 ease-out"
+                      className="object-contain p-2 group-hover:scale-105 transition-transform duration-500 ease-out z-10"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-40 group-hover:opacity-75 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-40 group-hover:opacity-75 transition-opacity z-10 pointer-events-none" />
 
                     {/* Magnify Icon */}
-                    <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
+                    <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md z-20">
                       <span className="text-xs text-[#1D4ED8]">🔍</span>
                     </div>
 
-                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-[0.65rem] font-accent font-bold uppercase tracking-wider text-[#1D4ED8] shadow-sm">
+                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-[0.65rem] font-accent font-bold uppercase tracking-wider text-[#1D4ED8] shadow-sm z-20">
                       {item.category}
                     </div>
                   </div>

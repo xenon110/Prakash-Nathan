@@ -108,7 +108,7 @@ export default function HomePage() {
                 <span className="text-slate-300">|</span>
                 <span>Consultant</span>
                 <span className="text-slate-300">|</span>
-                <span className="text-[#0F172A]">Media, Entertainment &amp; Technology</span>
+                <span>Media, Entertainment &amp; Technology</span>
               </p>
             </div>
 
@@ -371,7 +371,8 @@ export default function HomePage() {
               Partnering at the Intersection of <span className="text-royal-gradient">Business &amp; Innovation</span>
             </h2>
             <p className="font-accent text-sm sm:text-base text-[#475569] leading-relaxed">
-              Whether you are looking for business transformation, strategic entertainment partnerships, content syndication, or technology consulting—let's build sustainable growth together.
+              From business transformation and strategic entertainment partnerships to content syndication and technology consulting, we bringing experience and opportunity together to create sustainable growth. <br className="hidden sm:inline" />
+              Partner with experience. Grow with purpose.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <Link
