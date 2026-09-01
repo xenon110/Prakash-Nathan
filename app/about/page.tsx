@@ -33,55 +33,60 @@ export default function AboutPage() {
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute top-1/3 left-10 w-96 h-96 bg-sky-400/10 rounded-full blur-[110px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto relative z-10 space-y-4">
-          <div className="flex items-center gap-2 text-xs text-[#64748B] font-accent">
-            <Link href="/" className="no-underline text-[#64748B] hover:text-[#1D4ED8] transition-colors">
-              Home
-            </Link>
-            <span className="text-slate-300">/</span>
-            <span className="text-[#1D4ED8] font-medium">About</span>
+        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Header Content */}
+          <div className="lg:col-span-7 space-y-4">
+            <div className="flex items-center gap-2 text-xs text-[#64748B] font-accent">
+              <Link href="/" className="no-underline text-[#64748B] hover:text-[#1D4ED8] transition-colors">
+                Home
+              </Link>
+              <span className="text-slate-300">/</span>
+              <span className="text-[#1D4ED8] font-medium">About</span>
+            </div>
+
+            <div className="section-label">Executive Profile &amp; Journey</div>
+
+            <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] leading-[1.12]">
+              Building Businesses. <br />
+              Creating Opportunities. <br />
+              <span className="text-royal-gradient">Navigating Change.</span>
+            </h1>
+
+            <p className="font-accent text-base sm:text-lg text-[#475569] leading-relaxed pt-2">
+              With over three decades of experience across Technology, Media, Entertainment, and Entrepreneurship, Prakash Nathan has built his career across business development, sales, marketing, strategic partnerships, content, distribution, and commercial growth.
+            </p>
           </div>
 
-          <div className="section-label">Executive Profile &amp; Journey</div>
-
-          <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.12]">
-            Building Businesses. <br />
-            Creating Opportunities. <br />
-            <span className="text-royal-gradient">Navigating Change.</span>
-          </h1>
-
-          <p className="font-accent text-base sm:text-lg text-[#475569] max-w-3xl leading-relaxed pt-2">
-            With over three decades of experience across Technology, Media, Entertainment, and Entrepreneurship, Prakash Nathan has built his career across business development, sales, marketing, strategic partnerships, content, distribution, and commercial growth.
-          </p>
+          {/* Right Header Image - Diluted / Feathered Edges without border */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-sm sm:max-w-md aspect-[4/5] sm:aspect-[3/4] flex items-center justify-center">
+              {/* Soft ambient backlight glow */}
+              <div className="absolute inset-4 bg-gradient-to-tr from-[#1D4ED8]/25 via-[#38BDF8]/20 to-[#F59E0B]/15 blur-3xl rounded-full pointer-events-none" />
+              
+              {/* Seamless diluted edge image container */}
+              <div 
+                className="relative w-full h-full"
+                style={{
+                  maskImage: "radial-gradient(ellipse 78% 78% at 50% 48%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%)",
+                  WebkitMaskImage: "radial-gradient(ellipse 78% 78% at 50% 48%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%)"
+                }}
+              >
+                <Image
+                  src="/assets/p1.jpeg"
+                  alt="Prakash Nathan"
+                  fill
+                  className="object-cover object-[70%_20%]"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* ══ MAIN PROFILE BODY ══════════════════════════════════ */}
-      <section className="py-20 px-6 relative">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column (Sticky Portrait) */}
-          <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-            <div className="relative group rounded-3xl p-3 glass-card border border-white/90 shadow-[0_20px_50px_rgba(15,23,42,0.1)] overflow-hidden">
-              <div className="relative h-[460px] sm:h-[520px] w-full rounded-2xl overflow-hidden shadow-inner">
-                <Image
-                  src="/assets/portrait.jpg"
-                  alt="Prakash Nathan"
-                  fill
-                  className="object-cover object-top filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60" />
-                
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-xl border border-slate-200/80 shadow-lg">
-                  <p className="font-display font-bold text-lg text-[#0F172A] m-0">Prakash Nathan</p>
-                  <p className="font-accent text-xs text-[#1D4ED8] font-semibold m-0">30+ Years Leadership in Tech &amp; Entertainment</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column (Detailed Narrative Sections) */}
-          <div className="lg:col-span-7 space-y-12">
+      <section className="py-16 px-6 relative">
+        <div className="max-w-5xl mx-auto space-y-12">
             {/* Leadership Overview Highlight */}
             <div className="p-7 sm:p-8 rounded-3xl glass-card border border-blue-200/80 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/5 rounded-full blur-2xl pointer-events-none" />
@@ -219,7 +224,6 @@ export default function AboutPage() {
                 </Link>
               </div>
             </div>
-          </div>
         </div>
       </section>
 

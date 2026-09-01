@@ -2,6 +2,53 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { CoverflowCarousel, type CoverflowSlide } from "@/components/ui/coverflow-carousel";
+
+/* ── Gallery Slides for Coverflow Carousel ── */
+const GALLERY_SLIDES: CoverflowSlide[] = [
+  {
+    src: "/assets/p1.jpeg",
+    alt: "Prakash Nathan - Strategic Advisor",
+    title: "Prakash Nathan",
+    subtitle: "Founder & Strategic Advisor",
+  },
+  {
+    src: "/assets/gallery/Amir Khan.png",
+    alt: "Prakash Nathan with Aamir Khan",
+    title: "Aamir Khan & Prakash Nathan",
+    subtitle: "Global Cinema & Studio Partnerships",
+  },
+  {
+    src: "/assets/gallery/Sachin Tendulkar.png",
+    alt: "Prakash Nathan with Sachin Tendulkar",
+    title: "Sachin Tendulkar & Prakash Nathan",
+    subtitle: "Enterprise & Iconic Industry Leaders",
+  },
+  {
+    src: "/assets/gallery/Rajkumar Hirani.png",
+    alt: "Prakash Nathan with Rajkumar Hirani",
+    title: "Rajkumar Hirani & Prakash Nathan",
+    subtitle: "Blockbuster Content Lifecycle",
+  },
+  {
+    src: "/assets/gallery/Abhishek Kapoor.png",
+    alt: "Prakash Nathan with Abhishek Kapoor",
+    title: "Abhishek Kapoor & Prakash Nathan",
+    subtitle: "Creative Incubation & Distribution",
+  },
+  {
+    src: "/assets/gallery/Aditi Rao Hydari.png",
+    alt: "Prakash Nathan with Aditi Rao Hydari",
+    title: "Aditi Rao Hydari & Prakash Nathan",
+    subtitle: "Entertainment & Talent Alliances",
+  },
+  {
+    src: "/assets/gallery/cii event.jpeg",
+    alt: "Prakash Nathan at CII Event",
+    title: "CII Leadership Forum",
+    subtitle: "Keynote & Strategic Advisory",
+  },
+];
 
 /* ── Brand organisations list ── */
 const companies = [
@@ -112,13 +159,6 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Tagline Lead Highlight */}
-            <div className="relative pl-5 border-l-4 border-[#1D4ED8] bg-white/95 p-5 rounded-r-2xl border-t border-b border-r border-slate-200/80 shadow-[0_4px_20px_rgba(29,78,216,0.05)]">
-              <p className="text-lg sm:text-xl font-display italic text-[#0F172A] leading-snug m-0">
-                “Where strategy drives growth, innovation creates opportunity, and ideas become lasting businesses.”
-              </p>
-            </div>
-
             {/* Bio Narrative */}
             <div className="space-y-4 text-[#475569] text-sm sm:text-[0.96rem] leading-relaxed">
               <p>
@@ -163,19 +203,19 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero Right Visual / Portrait Card */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+          {/* Hero Right Visual / Portrait Card & Quote Banner */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-end space-y-5">
             <div className="relative group max-w-sm sm:max-w-md w-full">
               {/* Vibrant ambient background glow behind portrait */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-[#1D4ED8]/25 via-[#38BDF8]/20 to-[#F59E0B]/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-90" />
               
               <div className="relative rounded-3xl p-3 glass-card border border-white/90 shadow-[0_20px_50px_rgba(15,23,42,0.1)] overflow-hidden">
-                <div className="relative h-[420px] sm:h-[480px] w-full rounded-2xl overflow-hidden shadow-inner">
+                <div className="relative h-[380px] sm:h-[420px] w-full rounded-2xl overflow-hidden shadow-inner">
                   <Image
-                    src="/assets/portrait.jpg"
+                    src="/assets/p1.jpeg"
                     alt="Prakash Nathan - Entrepreneur, Consultant, Entertainment Leader"
                     fill
-                    className="object-cover object-top filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-cover object-[75%_20%] group-hover:scale-105 transition-transform duration-700 ease-out"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60" />
@@ -194,6 +234,13 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Quote Banner directly at the bottom of the profile image */}
+            <div className="max-w-sm sm:max-w-md w-full relative pl-5 border-l-4 border-[#1D4ED8] bg-white/95 p-4 sm:p-5 rounded-r-2xl border-t border-b border-r border-slate-200/80 shadow-[0_4px_20px_rgba(29,78,216,0.08)]">
+              <p className="text-base sm:text-lg font-display italic text-[#0F172A] leading-snug m-0">
+                “Where strategy drives growth, innovation creates opportunity, and ideas become lasting businesses.”
+              </p>
             </div>
           </div>
         </div>
@@ -356,39 +403,83 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══ CALL TO ACTION BANNER ══════════════════════════════ */}
+      {/* ══ CALL TO ACTION BANNER (EXECUTIVE LIGHT UI/UX DESIGN) ══════════════ */}
       <section className="relative py-24 px-6 overflow-hidden">
-        <div className="max-w-5xl mx-auto relative rounded-3xl p-10 sm:p-16 glass-card border border-blue-200/90 text-center overflow-hidden shadow-[0_20px_50px_rgba(29,78,216,0.08)]">
-          {/* Internal colorful glow */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-sky-400/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative rounded-3xl bg-white/95 backdrop-blur-xl p-8 sm:p-12 lg:p-16 border border-blue-200/80 shadow-[0_20px_60px_rgba(29,78,216,0.08)] overflow-hidden">
+          {/* Soft Light Backdrop Glows */}
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#1D4ED8]/10 via-[#38BDF8]/10 to-transparent blur-[120px] pointer-events-none rounded-full" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-[#F59E0B]/10 via-blue-400/5 to-transparent blur-[100px] pointer-events-none rounded-full" />
 
-          <div className="relative z-10 max-w-2xl mx-auto space-y-6">
-            <span className="font-accent text-xs font-bold uppercase tracking-[0.25em] text-[#1D4ED8]">
-              Let's Collaborate
-            </span>
-            <h2 className="font-display text-3xl sm:text-5xl font-bold tracking-tight text-[#0F172A]">
-              Partnering at the Intersection of <span className="text-royal-gradient">Business &amp; Innovation</span>
-            </h2>
-            <p className="font-accent text-sm sm:text-base text-[#475569] leading-relaxed">
-              From business transformation and strategic entertainment partnerships to content syndication and technology consulting, we bringing experience and opportunity together to create sustainable growth. <br className="hidden sm:inline" />
-              Partner with experience. Grow with purpose.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <Link
-                href="/contact"
-                className="px-8 py-3.5 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline
-                  bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white shadow-[0_4px_25px_rgba(29,78,216,0.35)] hover:shadow-[0_8px_35px_rgba(29,78,216,0.5)] hover:scale-105 transition-all duration-200"
-              >
-                Initiate a Conversation →
-              </Link>
-              <Link
-                href="/gallery"
-                className="px-7 py-3.5 rounded-full font-accent font-semibold text-xs uppercase tracking-wider no-underline
-                  bg-white hover:bg-slate-50 text-[#0F172A] border border-slate-200 shadow-sm transition-all duration-200"
-              >
-                View Moments &amp; Gallery
-              </Link>
+          <div className="relative z-10 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Left Content Side */}
+            <div className="lg:col-span-7 space-y-7 text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 backdrop-blur-md">
+                <span className="badge-dot" />
+                <span className="font-accent text-[0.72rem] font-bold tracking-[0.18em] uppercase text-[#1D4ED8]">
+                  Strategic Collaboration &amp; Advisory
+                </span>
+              </div>
+
+              <div className="space-y-3">
+                <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0F172A] leading-[1.1]">
+                  Partnering at the Intersection of <span className="text-royal-gradient">Business &amp; Innovation</span>
+                </h2>
+                <p className="font-accent text-sm sm:text-base text-[#475569] leading-relaxed max-w-xl">
+                  From commercial leadership and strategic entertainment alliances to global content distribution and enterprise technology consulting—we bring three decades of experience to unlock sustainable value.
+                </p>
+              </div>
+
+              {/* Value Highlights Pill Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#1D4ED8]/40 transition-colors">
+                  <div className="font-display text-2xl font-bold text-[#0F172A]">30+ Yrs</div>
+                  <div className="font-accent text-xs font-semibold text-[#1D4ED8] mt-0.5">Leadership Track Record</div>
+                </div>
+                <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#1D4ED8]/40 transition-colors">
+                  <div className="font-display text-2xl font-bold text-[#0F172A]">120+ Films</div>
+                  <div className="font-accent text-xs font-semibold text-[#0284C7] mt-0.5">Content &amp; Distribution</div>
+                </div>
+                <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-[#1D4ED8]/40 transition-colors">
+                  <div className="font-display text-2xl font-bold text-[#0F172A]">15+ Brands</div>
+                  <div className="font-accent text-xs font-semibold text-[#D97706] mt-0.5">Global Studios &amp; Tech</div>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline
+                    bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white
+                    shadow-[0_4px_25px_rgba(29,78,216,0.35)] hover:shadow-[0_8px_35px_rgba(29,78,216,0.5)]
+                    hover:scale-105 transition-all duration-200"
+                >
+                  <span>Initiate a Conversation</span>
+                  <span className="text-base">→</span>
+                </Link>
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-accent font-semibold text-xs uppercase tracking-wider no-underline
+                    bg-white hover:bg-slate-50 text-[#0F172A] border border-slate-200 shadow-sm
+                    hover:scale-105 transition-all duration-200"
+                >
+                  <span>View Moments &amp; Gallery</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Coverflow 3D Interactive Carousel */}
+            <div className="lg:col-span-5 relative flex justify-center items-center py-4">
+              <div className="w-full max-w-sm sm:max-w-md overflow-visible">
+                <CoverflowCarousel
+                  slides={GALLERY_SLIDES}
+                  showCaption
+                  showPagination
+                  showNavigation
+                  cardWidth="clamp(160px, 24vw, 240px)"
+                  className="py-2"
+                />
+              </div>
             </div>
           </div>
         </div>

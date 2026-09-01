@@ -17,7 +17,7 @@ const galleryData: GalleryItem[] = [
   { name: "Rajkumar Hirani", category: "Directors & Creators", src: "/assets/gallery/Rajkumar Hirani.png", note: "Acclaimed Film Director (PK, 3 Idiots)" },
   { name: "Kabir Khan", category: "Directors & Creators", src: "/assets/gallery/Kabir Khan.jpeg", note: "Director (Bajrangi Bhaijaan, 83)" },
   { name: "Hansal Mehta", category: "Directors & Creators", src: "/assets/gallery/Hansal Mehta.jpeg", note: "National Award-winning Filmmaker" },
-  { name: "Prakash Jha", category: "Directors & Creators", src: "/assets/gallery/Prakash Jha.png", note: "Acclaimed Filmmaker (Raajneeti, Gangaajal)" },
+  { name: "Prakash Padukone", category: "Icons & Luminaries", src: "/assets/gallery/Prakash Jha.png", note: "Badminton Legend & Former World No. 1" },
   { name: "Ashutosh Gowariker", category: "Directors & Creators", src: "/assets/gallery/Ashutosh Gowariker.png", note: "Academy Award Nominated Director" },
   { name: "Abhishek Kapoor", category: "Directors & Creators", src: "/assets/gallery/Abhishek Kapoor.png", note: "Director (Kai Po Che!, Rock On!)" },
   { name: "Mahesh Manjrekar", category: "Directors & Creators", src: "/assets/gallery/Mahesh Manjrekar.png", note: "Filmmaker & Veteran Actor" },
