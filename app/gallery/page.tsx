@@ -12,12 +12,12 @@ interface GalleryItem {
 
 const galleryData: GalleryItem[] = [
   { name: "Sachin Tendulkar", category: "Icons & Luminaries", src: "/assets/gallery/Sachin Tendulkar.png", note: "Cricket Legend" },
-  { name: "Amir Khan", category: "Actors & Stars", src: "/assets/gallery/Amir Khan.png", note: "Iconic Bollywood Actor & Producer" },
+  { name: "Aamir Khan", category: "Actors & Stars", src: "/assets/gallery/Amir Khan.png", note: "Iconic Bollywood Actor & Producer" },
   { name: "Shraddha Kapoor", category: "Actors & Stars", src: "/assets/gallery/Shraddha Kapoor.png", note: "Leading Bollywood Actress" },
   { name: "Rajkumar Hirani", category: "Directors & Creators", src: "/assets/gallery/Rajkumar Hirani.png", note: "Acclaimed Film Director (PK, 3 Idiots)" },
   { name: "Kabir Khan", category: "Directors & Creators", src: "/assets/gallery/Kabir Khan.jpeg", note: "Director (Bajrangi Bhaijaan, 83)" },
   { name: "Hansal Mehta", category: "Directors & Creators", src: "/assets/gallery/Hansal Mehta.jpeg", note: "National Award-winning Filmmaker" },
-  { name: "Prakash Padukone", category: "Icons & Luminaries", src: "/assets/gallery/Prakash Jha.png", note: "Badminton Legend & Former World No. 1" },
+  { name: "Prakash Jha", category: "Directors & Creators", src: "/assets/gallery/Prakash Jha.png", note: "Acclaimed Filmmaker & Director" },
   { name: "Ashutosh Gowariker", category: "Directors & Creators", src: "/assets/gallery/Ashutosh Gowariker.png", note: "Academy Award Nominated Director" },
   { name: "Abhishek Kapoor", category: "Directors & Creators", src: "/assets/gallery/Abhishek Kapoor.png", note: "Director (Kai Po Che!, Rock On!)" },
   { name: "Mahesh Manjrekar", category: "Directors & Creators", src: "/assets/gallery/Mahesh Manjrekar.png", note: "Filmmaker & Veteran Actor" },
@@ -25,7 +25,7 @@ const galleryData: GalleryItem[] = [
   { name: "Rajesh Mapuskar", category: "Directors & Creators", src: "/assets/gallery/Rajesh Mapuskar.png", note: "National Award-winning Director (Ventilator)" },
   { name: "Kaizad Gustad", category: "Directors & Creators", src: "/assets/gallery/Kaizad Gustad.jpeg", note: "Filmmaker & Writer" },
   { name: "Rakesh & Hrithik Roshan", category: "Industry Events", src: "/assets/gallery/Roshan se Roshan tak event- Rakesh & Rithik Roshan.png", note: "Roshan Se Roshan Tak Event" },
-  { name: "Raghuram Rajan", category: "Icons & Luminaries", src: "/assets/gallery/Raghuram Rajan.png", note: "Former Governor of RBI & Renowned Economist" },
+  { name: "Prakash Padukone", category: "Icons & Luminaries", src: "/assets/gallery/Raghuram Rajan.png", note: "Badminton player" },
   { name: "Carolina Marin", category: "Icons & Luminaries", src: "/assets/gallery/Carolina Marin.png", note: "Olympic Badminton Champion" },
   { name: "Prithviraj Sukumaran", category: "Actors & Stars", src: "/assets/gallery/Prithviraj Sukumaran.png", note: "Superstar, Director & Producer" },
   { name: "Govinda", category: "Actors & Stars", src: "/assets/gallery/Govinda.jpeg", note: "Legendary Bollywood Superstar" },

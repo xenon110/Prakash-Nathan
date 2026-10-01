@@ -162,13 +162,13 @@ export default function HomePage() {
             {/* Bio Narrative */}
             <div className="space-y-4 text-[#475569] text-sm sm:text-[0.96rem] leading-relaxed">
               <p>
-                With over three decades of experience across <span className="text-[#0F172A] font-semibold">Technology, Media, Entertainment, and Entrepreneurship</span>, Prakash Nathan has built a career defined by commercial leadership, strategic thinking, and business transformation.
+                With over three decades of experience and a wide-reaching network across <span className="text-[#0F172A] font-semibold">Information Technology, Media, Entertainment, and Entrepreneurship</span>, Prakash Nathan has built a career defined by commercial leadership, sharp strategic thinking, and business transformation.
               </p>
               <p>
-                Having held leadership roles with globally recognised organisations before founding <span className="text-[#1D4ED8] font-bold">Eagle Eye Entertainment LLP</span>, he brings together enterprise expertise with a deep understanding of the entertainment industry. His work spans business strategy, strategic partnerships, content development, rights monetisation, and commercial growth—helping businesses and creators unlock long-term value.
+                Having held leadership roles at globally recognised organisations before founding <span className="text-[#1D4ED8] font-bold">Eagle Eye Entertainment LLP</span>, he brings enterprise expertise together with a deep understanding of the entertainment industry. His work spans strategic partnerships, content development, rights monetisation, and commercial growth helping businesses and creators build lasting value.
               </p>
               <p className="hidden sm:block text-[#64748B]">
-                A defining strength of his journey has been the ability to recognise opportunity in changing circumstances, turn challenges into possibilities, and adapt strategies to create meaningful outcomes across evolving markets.
+                A defining strength of his journey has been the ability to spot opportunity amid changing circumstances, convert challenges into possibilities, and adapt strategy to deliver meaningful outcomes across evolving markets.
               </p>
             </div>
 
@@ -239,7 +239,7 @@ export default function HomePage() {
             {/* Quote Banner directly at the bottom of the profile image */}
             <div className="max-w-sm sm:max-w-md w-full relative pl-5 border-l-4 border-[#1D4ED8] bg-white/95 p-4 sm:p-5 rounded-r-2xl border-t border-b border-r border-slate-200/80 shadow-[0_4px_20px_rgba(29,78,216,0.08)]">
               <p className="text-base sm:text-lg font-display italic text-[#0F172A] leading-snug m-0">
-                “Where strategy drives growth, innovation creates opportunity, and ideas become lasting businesses.”
+                “A Jack of all Traits”
               </p>
             </div>
           </div>
@@ -391,11 +391,6 @@ export default function HomePage() {
                   <p className="font-accent text-sm text-[#475569] leading-relaxed">
                     {p.desc}
                   </p>
-                </div>
-
-                <div className="pt-6 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-accent text-[#64748B]">
-                  <span>Proven Track Record</span>
-                  <span className="group-hover:translate-x-1 transition-transform font-bold" style={{ color: p.accentColor }}>→</span>
                 </div>
               </div>
             ))}
