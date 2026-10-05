@@ -5,14 +5,19 @@ import Image from "next/image";
 
 const PORTRAIT_IMAGES = [
   {
-    src: "/assets/p1.jpeg",
-    alt: "Prakash Nathan - Strategic Advisor",
-    objectPos: "object-[75%_20%]",
-  },
-  {
     src: "/assets/p2.png",
     alt: "Prakash Nathan - Media & Technology Leader",
+    objectPos: "object-[50%_20%]",
+  },
+  {
+    src: "/assets/portrait_floral.png",
+    alt: "Prakash Nathan - Strategic Advisor",
     objectPos: "object-[50%_25%]",
+  },
+  {
+    src: "/assets/about_profile.png",
+    alt: "Prakash Nathan - Founder & Industry Leader",
+    objectPos: "object-[50%_20%]",
   },
 ];
 
