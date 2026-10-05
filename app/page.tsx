@@ -127,9 +127,20 @@ export default function HomePage() {
     <>
       {/* ══ HERO SECTION ════════════════════════════════════════ */}
       <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
-        {/* Dynamic Glows inside hero */}
+        {/* Dynamic Glows & Lightweight Studio Camera Background Watermark */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#1D4ED8]/15 via-[#38BDF8]/15 to-[#F59E0B]/10 blur-[120px] pointer-events-none -z-10 rounded-full" />
         <div ref={particleRef} className="absolute inset-0 pointer-events-none overflow-hidden -z-10" />
+
+        {/* Lightweight Studio Camera Watermark Image */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[850px] h-[600px] lg:h-[850px] opacity-[0.12] mix-blend-multiply pointer-events-none -z-10 select-none">
+          <Image
+            src="/assets/camera_bg.png"
+            alt=""
+            fill
+            className="object-contain object-right"
+            priority
+          />
+        </div>
 
         <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center">
           {/* Hero Left Content */}
