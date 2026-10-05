@@ -491,39 +491,55 @@ export default function FilmographyPage() {
   return (
     <>
       {/* ══ HEADER BANNER ══════════════════════════════════════ */}
-      <div className="relative pt-36 pb-16 px-6 overflow-hidden border-b border-slate-200/80">
-        <div className="absolute top-0 right-10 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[110px] pointer-events-none" />
-        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-sky-400/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="relative pt-36 pb-20 px-6 overflow-hidden border-b border-slate-200/80 bg-slate-950 text-white">
+        {/* Creative Cinematic HD Background Banner Image */}
+        <div className="absolute inset-0 z-0 opacity-45 mix-blend-luminosity">
+          <Image
+            src="/assets/filmography_banner.jpg"
+            alt="Filmography Background Banner"
+            fill
+            className="object-cover object-center scale-105"
+            priority
+          />
+        </div>
 
-        <div className="max-w-7xl mx-auto relative z-10 space-y-4">
-          <div className="flex items-center gap-2 text-xs text-[#64748B] font-accent">
-            <Link href="/" className="no-underline text-[#64748B] hover:text-[#1D4ED8] transition-colors">
+        {/* Ambient Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/70 z-0" />
+        <div className="absolute -top-24 right-0 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[130px] pointer-events-none z-0" />
+        <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[140px] pointer-events-none z-0" />
+
+        <div className="max-w-7xl mx-auto relative z-10 space-y-5">
+          <div className="flex items-center gap-2 text-xs text-slate-300 font-accent">
+            <Link href="/" className="no-underline text-slate-400 hover:text-white transition-colors">
               Home
             </Link>
-            <span className="text-slate-300">/</span>
-            <span className="text-[#1D4ED8] font-medium">Filmography</span>
+            <span className="text-slate-600">/</span>
+            <span className="text-sky-400 font-medium">Filmography</span>
           </div>
 
-          <div className="section-label">Cinema Legacy &amp; Posters</div>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-xs font-accent font-bold uppercase tracking-wider text-sky-300 backdrop-blur-md">
+            <span>🎬 Cinema Legacy &amp; Posters</span>
+          </div>
 
-          <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-[#0F172A] max-w-4xl leading-[1.12]">
-            Filmography &amp; <span className="text-royal-gradient">Releases</span>
+          <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight text-white max-w-4xl leading-[1.12]">
+            Filmography &amp; <span className="bg-gradient-to-r from-sky-400 via-blue-300 to-amber-300 bg-clip-text text-transparent">Releases</span>
           </h1>
 
-          <p className="font-accent text-base sm:text-lg text-[#475569] max-w-3xl leading-relaxed">
-            <span className="text-[#0F172A] font-semibold">120+ films</span> across Hindi, English, Tamil, Malayalam, Marathi, Punjabi and Multi-Language cinema. Explore visual posters, release titles, direct IMDb links, and commercial distribution leadership.
+          <p className="font-accent text-base sm:text-lg text-slate-200 max-w-3xl leading-relaxed">
+            <span className="text-white font-semibold">120+ films</span> across Hindi, English, Tamil, Malayalam, Marathi, Punjabi and Multi-Language cinema. Explore visual posters, release titles, direct IMDb links, and commercial distribution leadership.
           </p>
 
           {/* Quick Metrics */}
           <div className="flex flex-wrap gap-4 pt-2">
-            <div className="px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm font-accent text-xs text-[#475569]">
-              <span className="text-[#1D4ED8] font-bold text-sm">120+</span> Film Releases &amp; Posters
+            <div className="px-4 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-lg font-accent text-xs text-slate-200 flex items-center gap-2">
+              <span className="text-[#F5C518] font-bold text-sm">120+</span> Film Releases &amp; Posters
             </div>
-            <div className="px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm font-accent text-xs text-[#475569]">
-              <span className="text-[#1D4ED8] font-bold text-sm">6+</span> Languages
+            <div className="px-4 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-lg font-accent text-xs text-slate-200 flex items-center gap-2">
+              <span className="text-sky-300 font-bold text-sm">6+</span> Languages
             </div>
-            <div className="px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm font-accent text-xs text-[#475569]">
-              <span className="text-[#1D4ED8] font-bold text-sm">3</span> National Awards (Ventilator)
+            <div className="px-4 py-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 shadow-lg font-accent text-xs text-slate-200 flex items-center gap-2">
+              <span className="text-amber-300 font-bold text-sm">3</span> National Awards (Ventilator)
             </div>
           </div>
         </div>
