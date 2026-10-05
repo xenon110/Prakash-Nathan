@@ -131,13 +131,13 @@ export default function HomePage() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#1D4ED8]/15 via-[#38BDF8]/15 to-[#F59E0B]/10 blur-[120px] pointer-events-none -z-10 rounded-full" />
         <div ref={particleRef} className="absolute inset-0 pointer-events-none overflow-hidden -z-10" />
 
-        {/* Studio Camera Background Watermark (Darker & Crisper) */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[850px] h-[600px] lg:h-[850px] opacity-35 mix-blend-multiply pointer-events-none -z-10 select-none">
+        {/* Studio Camera Background Watermark (Left Aligned) */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[850px] h-[600px] lg:h-[850px] opacity-35 mix-blend-multiply pointer-events-none -z-10 select-none">
           <Image
             src="/assets/camera_bg.png"
             alt=""
             fill
-            className="object-contain object-right"
+            className="object-contain object-left"
             priority
           />
         </div>
@@ -261,7 +261,7 @@ export default function HomePage() {
                 className="group relative p-5 rounded-2xl glass-card-interactive flex flex-col items-center justify-center text-center h-36"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-                
+
                 {co.logo ? (
                   <div className="relative h-12 w-32 flex items-center justify-center mb-2">
                     <Image
@@ -336,7 +336,7 @@ export default function HomePage() {
                   className="absolute top-0 left-0 right-0 h-1.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
                   style={{ backgroundColor: p.accentColor }}
                 />
-                
+
                 <div className="space-y-4">
                   <div
                     className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm group-hover:scale-110 transition-transform"
@@ -344,7 +344,7 @@ export default function HomePage() {
                   >
                     {p.icon}
                   </div>
-                  
+
                   <div
                     className="inline-block px-3 py-1 rounded-full font-accent text-[0.65rem] font-bold uppercase tracking-widest"
                     style={{ backgroundColor: p.badgeBg, color: p.badgeText }}
