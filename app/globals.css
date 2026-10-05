@@ -80,6 +80,9 @@
 .font-accent {
   font-family: 'Outfit', system-ui, -apple-system, sans-serif;
 }
+.font-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
 
 /* Impactful Gradient Text */
 .text-gold-gradient,

@@ -238,7 +238,7 @@ export default function HomePage() {
 
             {/* Quote Banner directly at the bottom of the profile image */}
             <div className="max-w-sm sm:max-w-md w-full relative pl-5 border-l-4 border-[#1D4ED8] bg-white/95 p-4 sm:p-5 rounded-r-2xl border-t border-b border-r border-slate-200/80 shadow-[0_4px_20px_rgba(29,78,216,0.08)]">
-              <p className="text-base sm:text-lg font-display italic text-[#0F172A] leading-snug m-0">
+              <p className="text-xl sm:text-2xl font-quote italic font-semibold text-[#0F172A] leading-snug m-0 tracking-wide">
                 “A Jack of all Traits”
               </p>
             </div>
