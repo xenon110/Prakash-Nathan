@@ -224,49 +224,65 @@ export default function GalleryPage() {
                 <div
                   key={`${item.name}-${index}`}
                   onClick={() => openLightbox(index)}
-                  className="group relative rounded-3xl overflow-hidden glass-card-interactive cursor-pointer border border-slate-200/90 shadow-sm hover:shadow-[0_20px_35px_-5px_rgba(29,78,216,0.12)] flex flex-col justify-between"
+                  className="group relative rounded-3xl overflow-hidden bg-white border border-slate-200/90 shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_-5px_rgba(29,78,216,0.16)] hover:border-blue-300/90 -translate-y-0 hover:-translate-y-1.5 transition-all duration-300 ease-out cursor-pointer flex flex-col justify-between"
                 >
-                  {/* Photo Container */}
-                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
-                    {/* Ambient Blurred Background Fill */}
+                  {/* Photo Frame Container */}
+                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-100/70 flex items-center justify-center">
+                    {/* Ambient Blurred Background Fill (Light & Elegant) */}
                     <Image
                       src={item.src}
                       alt=""
                       fill
-                      className="object-cover blur-md scale-110 opacity-40 pointer-events-none"
+                      className="object-cover blur-xl scale-125 opacity-30 pointer-events-none group-hover:scale-135 transition-transform duration-700 ease-out"
                       aria-hidden="true"
                     />
-                    {/* Main Image contained 100% inside the card box */}
+
+                    {/* Main High-Res Image */}
                     <Image
                       src={item.src}
                       alt={item.name}
                       fill
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                      className="object-contain p-2 group-hover:scale-105 transition-transform duration-500 ease-out z-10"
+                      className="object-contain p-3 group-hover:scale-[1.04] transition-transform duration-500 ease-out z-10"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-40 group-hover:opacity-75 transition-opacity z-10 pointer-events-none" />
 
-                    {/* Magnify Icon */}
-                    <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md z-20">
-                      <span className="text-xs text-[#1D4ED8]">🔍</span>
+                    {/* Gradient overlay on image hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
+
+                    {/* Category Glass Pill */}
+                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-[0.65rem] font-accent font-bold uppercase tracking-wider text-[#1D4ED8] shadow-sm z-20">
+                      {item.category}
                     </div>
 
-                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-[0.65rem] font-accent font-bold uppercase tracking-wider text-[#1D4ED8] shadow-sm z-20">
-                      {item.category}
+                    {/* View Photo Floating Action Button */}
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] text-white font-accent text-xs font-semibold tracking-wide shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-20 flex items-center gap-1.5 whitespace-nowrap">
+                      <span>Inspect Photo</span>
+                      <span className="text-[0.7rem]">🔍</span>
                     </div>
                   </div>
 
-                  {/* Caption Strip */}
-                  <div className="p-3.5 bg-white border-t border-slate-100">
-                    <h3 className="font-display font-bold text-sm sm:text-base text-[#0F172A] truncate group-hover:text-[#1D4ED8] transition-colors m-0">
-                      {item.name}
-                    </h3>
-                    {item.note && (
-                      <p className="font-accent text-xs text-[#64748B] truncate mt-0.5 m-0 font-medium">
-                        {item.note}
-                      </p>
-                    )}
+                  {/* Caption & Metadata Strip */}
+                  <div className="p-4 bg-white border-t border-slate-100 relative z-20 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="font-display font-bold text-base text-[#0F172A] line-clamp-1 group-hover:text-[#1D4ED8] transition-colors m-0">
+                        {item.name}
+                      </h3>
+                      {item.note && (
+                        <p className="font-accent text-xs text-[#64748B] line-clamp-1 mt-1 m-0 font-medium">
+                          {item.note}
+                        </p>
+                      )}
+                    </div>
+                    <div className="mt-3 flex items-center justify-between text-[0.7rem] font-accent text-[#64748B] pt-2 border-t border-slate-100/70">
+                      <span className="text-[#1D4ED8] font-semibold flex items-center gap-1">
+                        <span>✨ High Definition</span>
+                      </span>
+                      <span className="text-[#94A3B8]">Click to expand</span>
+                    </div>
+
+                    {/* Hover Accent Line at bottom of card */}
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#1D4ED8] via-[#38BDF8] to-[#2563EB] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                   </div>
                 </div>
               ))}
