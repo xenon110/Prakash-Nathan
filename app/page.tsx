@@ -131,8 +131,8 @@ export default function HomePage() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-[#1D4ED8]/15 via-[#38BDF8]/15 to-[#F59E0B]/10 blur-[120px] pointer-events-none -z-10 rounded-full" />
         <div ref={particleRef} className="absolute inset-0 pointer-events-none overflow-hidden -z-10" />
 
-        {/* Lightweight Studio Camera Watermark Image */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[850px] h-[600px] lg:h-[850px] opacity-[0.12] mix-blend-multiply pointer-events-none -z-10 select-none">
+        {/* Studio Camera Background Watermark (Darker & Crisper) */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] lg:w-[850px] h-[600px] lg:h-[850px] opacity-35 mix-blend-multiply pointer-events-none -z-10 select-none">
           <Image
             src="/assets/camera_bg.png"
             alt=""
