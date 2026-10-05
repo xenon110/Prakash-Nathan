@@ -10,11 +10,6 @@ const PORTRAIT_IMAGES = [
     objectPos: "object-[50%_20%]",
   },
   {
-    src: "/assets/portrait_floral.png",
-    alt: "Prakash Nathan - Strategic Advisor",
-    objectPos: "object-[50%_25%]",
-  },
-  {
     src: "/assets/about_profile.png",
     alt: "Prakash Nathan - Founder & Industry Leader",
     objectPos: "object-[50%_20%]",
