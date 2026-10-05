@@ -25,6 +25,132 @@ function getPoster(title) {
   return `/assets/films/${slug}.jpg`;
 }
 
+const imdbMap = {
+  // Hindi (77)
+  "PK": "https://www.imdb.com/title/tt2338151/",
+  "Chennai Express": "https://www.imdb.com/title/tt2112124/",
+  "Jodhaa Akbar": "https://www.imdb.com/title/tt0449994/",
+  "Yeh Jawaani Hai Deewani": "https://www.imdb.com/title/tt2178470/",
+  "Barfi!": "https://www.imdb.com/title/tt2082197/",
+  "Dilwale": "https://www.imdb.com/title/tt4535650/",
+  "Raees": "https://www.imdb.com/title/tt3405236/",
+  "Kick": "https://www.imdb.com/title/tt2372222/",
+  "2 States": "https://www.imdb.com/title/tt2372678/",
+  "Dear Zindagi": "https://www.imdb.com/title/tt5946128/",
+  "Haider": "https://www.imdb.com/title/tt3390572/",
+  "Highway": "https://www.imdb.com/title/tt2980794/",
+  "Tubelight": "https://www.imdb.com/title/tt5882970/",
+  "Raajneeti": "https://www.imdb.com/title/tt1291465/",
+  "Satyagraha": "https://www.imdb.com/title/tt2275802/",
+  "Kaminey": "https://www.imdb.com/title/tt1274295/",
+  "Rowdy Rathore": "https://www.imdb.com/title/tt2077833/",
+  "Rustom": "https://www.imdb.com/title/tt5165344/",
+  "The Lunchbox": "https://www.imdb.com/title/tt2350496/",
+  "Guzaarish": "https://www.imdb.com/title/tt1438298/",
+  "Delhi-6": "https://www.imdb.com/title/tt1043451/",
+  "Dev.D": "https://www.imdb.com/title/tt1327035/",
+  "Tees Maar Khan": "https://www.imdb.com/title/tt1572311/",
+  "I Hate Luv Storys": "https://www.imdb.com/title/tt1667838/",
+  "Wake Up Sid": "https://www.imdb.com/title/tt1324059/",
+  "Paan Singh Tomar": "https://www.imdb.com/title/tt1620933/",
+  "Chillar Party": "https://www.imdb.com/title/tt1841542/",
+  "Delhi Belly": "https://www.imdb.com/title/tt1934231/",
+  "Heroine": "https://www.imdb.com/title/tt1949548/",
+  "7 Khoon Maaf": "https://www.imdb.com/title/tt1629376/",
+  "No One Killed Jessica": "https://www.imdb.com/title/tt1734110/",
+  "Arjun: The Warrior Prince": "https://www.imdb.com/title/tt2404027/",
+  "ABCD: Any Body Can Dance": "https://www.imdb.com/title/tt2321163/",
+  "Kai Po Che!": "https://www.imdb.com/title/tt2213054/",
+  "Himmatwala": "https://www.imdb.com/title/tt2344678/",
+  "Heropanti": "https://www.imdb.com/title/tt3142232/",
+  "Luv Shuv Tey Chicken Khurana": "https://www.imdb.com/title/tt2186933/",
+  "Gippi": "https://www.imdb.com/title/tt2814372/",
+  "Shahid": "https://www.imdb.com/title/tt2181831/",
+  "Filmistaan": "https://www.imdb.com/title/tt2417560/",
+  "Rangrezz": "https://www.imdb.com/title/tt2706264/",
+  "Joker": "https://www.imdb.com/title/tt7286456/",
+  "Tere Naal Love Ho Gaya": "https://www.imdb.com/title/tt2130242/",
+  "Thank You": "https://www.imdb.com/title/tt1720254/",
+  "Saheb, Biwi Aur Gangster": "https://www.imdb.com/title/tt2073070/",
+  "My Friend Pinto": "https://www.imdb.com/title/tt1512220/",
+  "Kurbaan": "https://www.imdb.com/title/tt1185442/",
+  "Chance Pe Dance": "https://www.imdb.com/title/tt1392744/",
+  "We Are Family": "https://www.imdb.com/title/tt1428459/",
+  "Peepli Live": "https://www.imdb.com/title/tt1447508/",
+  "Udaan": "https://www.imdb.com/title/tt1639426/",
+  "A Wednesday!": "https://www.imdb.com/title/tt1280558/",
+  "Aamir": "https://www.imdb.com/title/tt1241195/",
+  "Life in a... Metro": "https://www.imdb.com/title/tt0800956/",
+  "The Blue Umbrella": "https://www.imdb.com/title/tt0457802/",
+  "Mumbai Meri Jaan": "https://www.imdb.com/title/tt1266583/",
+  "Dhan Dhana Dhan Goal": "https://www.imdb.com/title/tt1120897/",
+  "Kismat Konnection": "https://www.imdb.com/title/tt1105733/",
+  "Oye Lucky! Lucky Oye!": "https://www.imdb.com/title/tt1292703/",
+  "Welcome to Sajjanpur": "https://www.imdb.com/title/tt1221139/",
+  "Dhoondte Reh Jaaoge": "https://www.imdb.com/title/tt1391544/",
+  "Aagey Se Right": "https://www.imdb.com/title/tt1479667/",
+  "What's Your Raashee?": "https://www.imdb.com/title/tt1242530/",
+  "Main Aurr Mrs Khanna": "https://www.imdb.com/title/tt1174041/",
+  "Agyaat": "https://www.imdb.com/title/tt1415252/",
+  "Jayantabhai Ki Luv Story": "https://www.imdb.com/title/tt2622130/",
+  "Ghanchakkar": "https://www.imdb.com/title/tt2246724/",
+  "Issaq": "https://www.imdb.com/title/tt2215163/",
+  "Raja Natwarlal": "https://www.imdb.com/title/tt3483712/",
+  "Dongri Ka Raja": "https://www.imdb.com/title/tt6046994/",
+  "Bollywood Diaries": "https://www.imdb.com/title/tt5216810/",
+  "Project Marathwada": "https://www.imdb.com/title/tt5714802/",
+  "A Flying Jatt": "https://www.imdb.com/title/tt5235880/",
+  "Shortcut Safari": "https://www.imdb.com/title/tt4505006/",
+  "Lipstick Under My Burkha": "https://www.imdb.com/title/tt4807830/",
+  "Love All": "https://www.imdb.com/title/tt9511468/",
+
+  // English
+  "The Avengers": "https://www.imdb.com/title/tt0848228/",
+  "Guardians of the Galaxy": "https://www.imdb.com/title/tt2015381/",
+  "Captain America: The Winter Soldier": "https://www.imdb.com/title/tt1843866/",
+  "Maleficent": "https://www.imdb.com/title/tt1587310/",
+  "Up": "https://www.imdb.com/title/tt1049413/",
+  "Cinderella": "https://www.imdb.com/title/tt1661199/",
+  "Million Dollar Arm": "https://www.imdb.com/title/tt1647668/",
+  "The Proposal": "https://www.imdb.com/title/tt1080016/",
+  "The Lone Ranger": "https://www.imdb.com/title/tt1210819/",
+  "Oz the Great and Powerful": "https://www.imdb.com/title/tt1621044/",
+  "Planes": "https://www.imdb.com/title/tt1691916/",
+  "Planes: Fire & Rescue": "https://www.imdb.com/title/tt2980706/",
+  "Surrogates": "https://www.imdb.com/title/tt0986263/",
+  "Bolt": "https://www.imdb.com/title/tt0435705/",
+  "A Christmas Carol": "https://www.imdb.com/title/tt1049413/",
+  "The Princess and the Frog": "https://www.imdb.com/title/tt0780521/",
+  "Muppets Most Wanted": "https://www.imdb.com/title/tt2281587/",
+  "Bedtime Stories": "https://www.imdb.com/title/tt0960731/",
+  "Race to Witch Mountain": "https://www.imdb.com/title/tt1075417/",
+  "G-Force": "https://www.imdb.com/title/tt1095217/",
+  "Tinker Bell and the Lost Treasure": "https://www.imdb.com/title/tt1216515/",
+  "Old Dogs": "https://www.imdb.com/title/tt0960731/",
+  "Confessions of a Shopaholic": "https://www.imdb.com/title/tt1093908/",
+
+  // Tamil & Regional
+  "Vettai": "https://www.imdb.com/title/tt2140507/",
+  "Thaandavam": "https://www.imdb.com/title/tt2359483/",
+  "Anjaan": "https://www.imdb.com/title/tt3492576/",
+  "Settai": "https://www.imdb.com/title/tt2438814/",
+  "Kalakalappu": "https://www.imdb.com/title/tt2373300/",
+  "Mugamoodi": "https://www.imdb.com/title/tt2372863/",
+  "Theeya Velai Seiyyanum Kumaru": "https://www.imdb.com/title/tt2929944/",
+  "Muran": "https://www.imdb.com/title/tt2024479/",
+  "Grandmaster": "https://www.imdb.com/title/tt2325754/",
+  "Husbands in Goa": "https://www.imdb.com/title/tt2396349/",
+  "Ventilator": "https://www.imdb.com/title/tt6074158/",
+  "Harishchandrachi Factory": "https://www.imdb.com/title/tt1520268/",
+  "No Entry: Pudhe Dhoka Aahey": "https://www.imdb.com/title/tt2372481/",
+  "Youth": "https://www.imdb.com/title/tt5784964/",
+  "Sur Sapata": "https://www.imdb.com/title/tt9877472/",
+  "Sarvann": "https://www.imdb.com/title/tt6380614/",
+  "Tutak Tutak Tutiya": "https://www.imdb.com/title/tt6090724/",
+  "Ship of Theseus": "https://www.imdb.com/title/tt2260723/",
+  "The Namesake": "https://www.imdb.com/title/tt0492452/"
+};
+
 const rawFilms = [
   /* ── HINDI (77) ── */
   { title: "PK", role: "Marketing, Distribution & Syndication", lang: "Hindi", year: "2014", highlight: true },
@@ -161,7 +287,8 @@ const rawFilms = [
 
 const processedFilms = rawFilms.map(f => ({
   ...f,
-  poster: getPoster(f.title)
+  poster: getPoster(f.title),
+  imdbUrl: imdbMap[f.title] || `https://www.imdb.com/find/?q=${encodeURIComponent(f.title)}`
 }));
 
 const tsContent = `"use client";
@@ -177,6 +304,7 @@ interface Film {
   year?: string;
   note?: string;
   highlight?: boolean;
+  imdbUrl?: string;
 }
 
 const filmographyData: Film[] = ${JSON.stringify(processedFilms, null, 2)};
@@ -257,14 +385,24 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-50 group-hover:opacity-85 transition-opacity duration-300" />
 
         {/* Top Badges */}
-        <div className="absolute top-2 left-2 right-2 flex items-center justify-between pointer-events-none z-10">
+        <div className="absolute top-2 left-2 right-2 flex items-center justify-between z-20">
           <span className={\`px-2 py-0.5 rounded-full backdrop-blur-md font-accent text-[0.6rem] font-bold uppercase tracking-wider shadow-sm \${theme.bg} \${theme.text} bg-white/95 border \${theme.border}\`}>
             {film.lang}
           </span>
-          {film.highlight && (
-            <span className="px-2 py-0.5 rounded-full bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white font-accent text-[0.6rem] font-bold shadow-md flex items-center gap-0.5">
-              ⭐ Key
-            </span>
+          
+          {/* Official IMDb Badge on Card */}
+          {film.imdbUrl && (
+            <a
+              href={film.imdbUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="px-2 py-0.5 rounded bg-[#F5C518] hover:bg-[#e2b616] text-black font-accent text-[0.62rem] font-extrabold uppercase tracking-wider shadow-md flex items-center gap-0.5 no-underline transition-transform hover:scale-105"
+              title={\`Open \${film.title} on IMDb\`\}
+            >
+              <span>IMDb</span>
+              <span className="text-[0.55rem]">↗</span>
+            </a>
           )}
         </div>
 
@@ -304,7 +442,20 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
         </div>
 
         <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between text-[0.68rem] font-accent text-[#64748B]">
-          <span>Details</span>
+          {film.imdbUrl ? (
+            <a
+              href={film.imdbUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-[#D97706] hover:text-[#B45309] font-bold flex items-center gap-1 no-underline"
+            >
+              <span className="px-1.5 py-0.5 rounded bg-[#F5C518] text-black text-[0.6rem]">IMDb</span>
+              <span>Link ↗</span>
+            </a>
+          ) : (
+            <span>Details</span>
+          )}
           <span className="text-[#1D4ED8] font-bold group-hover:translate-x-0.5 transition-transform">→</span>
         </div>
       </div>
@@ -360,7 +511,7 @@ export default function FilmographyPage() {
           </h1>
 
           <p className="font-accent text-base sm:text-lg text-[#475569] max-w-3xl leading-relaxed">
-            <span className="text-[#0F172A] font-semibold">120+ films</span> across Hindi, English, Tamil, Malayalam, Marathi, Punjabi and Multi-Language cinema. Explore visual posters, release titles, and commercial distribution leadership across three decades.
+            <span className="text-[#0F172A] font-semibold">120+ films</span> across Hindi, English, Tamil, Malayalam, Marathi, Punjabi and Multi-Language cinema. Explore visual posters, release titles, direct IMDb links, and commercial distribution leadership.
           </p>
 
           {/* Quick Metrics */}
@@ -444,10 +595,10 @@ export default function FilmographyPage() {
             <span>
               Showing <strong className="text-[#0F172A]">{filteredFilms.length}</strong> of {filmographyData.length} cinematic titles
             </span>
-            <span className="text-[#1D4ED8] font-medium">Click any movie poster card for credits &amp; details</span>
+            <span className="text-[#1D4ED8] font-medium">Click any card to inspect poster &amp; IMDb page</span>
           </div>
 
-          {/* Films Poster Grid (Compact 2 to 6 columns) */}
+          {/* Films Poster Grid */}
           {filteredFilms.length > 0 ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4.5">
               {filteredFilms.map((film, index) => (
@@ -518,7 +669,7 @@ export default function FilmographyPage() {
             {/* Content Right */}
             <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
                   <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-accent font-bold uppercase tracking-wider text-[#1D4ED8]">
                     {activeModalFilm.lang}
                   </span>
@@ -555,12 +706,22 @@ export default function FilmographyPage() {
                 )}
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-3">
+                {activeModalFilm.imdbUrl && (
+                  <a
+                    href={activeModalFilm.imdbUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2.5 rounded-full font-accent font-extrabold text-xs uppercase tracking-wider no-underline bg-[#F5C518] hover:bg-[#e2b616] text-black shadow-md flex items-center gap-1.5 transition-transform hover:scale-105"
+                  >
+                    <span>View on IMDb</span>
+                    <span className="text-sm">↗</span>
+                  </a>
+                )}
                 <Link
                   href="/contact"
                   onClick={() => setActiveModalFilm(null)}
-                  className="px-5 py-2.5 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline
-                    bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white shadow-sm"
+                  className="px-5 py-2.5 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white shadow-sm"
                 >
                   Consult On Similar Projects →
                 </Link>
@@ -598,5 +759,4 @@ export default function FilmographyPage() {
 
 fs.writeFileSync(path.join(__dirname, '..', 'app', 'filmography', 'page.tsx'), tsContent);
 
-console.log('Successfully updated app/filmography/page.tsx with compact cards and responsive 5-6 column grid!');
-
+console.log('Successfully updated app/filmography/page.tsx with exact IMDb links and IMDb badges!');

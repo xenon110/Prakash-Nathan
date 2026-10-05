@@ -11,6 +11,7 @@ interface Film {
   year?: string;
   note?: string;
   highlight?: boolean;
+  imdbUrl?: string;
 }
 
 const filmographyData: Film[] = [
@@ -20,7 +21,8 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2014",
     "highlight": true,
-    "poster": "/assets/films/pk.jpg"
+    "poster": "/assets/films/pk.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2338151/"
   },
   {
     "title": "Chennai Express",
@@ -28,7 +30,8 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2013",
     "highlight": true,
-    "poster": "/assets/films/chennai-express.jpg"
+    "poster": "/assets/films/chennai-express.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2112124/"
   },
   {
     "title": "Jodhaa Akbar",
@@ -36,7 +39,8 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2008",
     "highlight": true,
-    "poster": "/assets/films/jodhaa-akbar.jpg"
+    "poster": "/assets/films/jodhaa-akbar.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0449994/"
   },
   {
     "title": "Yeh Jawaani Hai Deewani",
@@ -44,7 +48,8 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2013",
     "highlight": true,
-    "poster": "/assets/films/yeh-jawaani-hai-deewani.jpg"
+    "poster": "/assets/films/yeh-jawaani-hai-deewani.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2178470/"
   },
   {
     "title": "Barfi!",
@@ -52,42 +57,48 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2012",
     "highlight": true,
-    "poster": "/assets/films/barfi.jpg"
+    "poster": "/assets/films/barfi.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2082197/"
   },
   {
     "title": "Dilwale",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2015",
-    "poster": "/assets/films/dilwale.jpg"
+    "poster": "/assets/films/dilwale.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt4535650/"
   },
   {
     "title": "Raees",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2017",
-    "poster": "/assets/films/raees.jpg"
+    "poster": "/assets/films/raees.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt3405236/"
   },
   {
     "title": "Kick",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2014",
-    "poster": "/assets/films/kick.jpg"
+    "poster": "/assets/films/kick.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2372222/"
   },
   {
     "title": "2 States",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2014",
-    "poster": "/assets/films/2-states.jpg"
+    "poster": "/assets/films/2-states.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2372678/"
   },
   {
     "title": "Dear Zindagi",
     "role": "Overseas Distribution Logistics",
     "lang": "Hindi",
     "year": "2016",
-    "poster": "/assets/films/dear-zindagi.jpg"
+    "poster": "/assets/films/dear-zindagi.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt5946128/"
   },
   {
     "title": "Haider",
@@ -95,56 +106,64 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2014",
     "highlight": true,
-    "poster": "/assets/films/haider.jpg"
+    "poster": "/assets/films/haider.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt3390572/"
   },
   {
     "title": "Highway",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2014",
-    "poster": "/assets/films/highway.jpg"
+    "poster": "/assets/films/highway.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2980794/"
   },
   {
     "title": "Tubelight",
     "role": "Theatrical Distribution Logistics",
     "lang": "Hindi",
     "year": "2017",
-    "poster": "/assets/films/tubelight.jpg"
+    "poster": "/assets/films/tubelight.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt5882970/"
   },
   {
     "title": "Raajneeti",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2010",
-    "poster": "/assets/films/raajneeti.jpg"
+    "poster": "/assets/films/raajneeti.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1291465/"
   },
   {
     "title": "Satyagraha",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/satyagraha.jpg"
+    "poster": "/assets/films/satyagraha.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2275802/"
   },
   {
     "title": "Kaminey",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/kaminey.jpg"
+    "poster": "/assets/films/kaminey.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1274295/"
   },
   {
     "title": "Rowdy Rathore",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2012",
-    "poster": "/assets/films/rowdy-rathore.jpg"
+    "poster": "/assets/films/rowdy-rathore.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2077833/"
   },
   {
     "title": "Rustom",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2016",
-    "poster": "/assets/films/rustom.jpg"
+    "poster": "/assets/films/rustom.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt5165344/"
   },
   {
     "title": "The Lunchbox",
@@ -152,21 +171,24 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2013",
     "highlight": true,
-    "poster": "/assets/films/the-lunchbox.jpg"
+    "poster": "/assets/films/the-lunchbox.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2350496/"
   },
   {
     "title": "Guzaarish",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2010",
-    "poster": "/assets/films/guzaarish.jpg"
+    "poster": "/assets/films/guzaarish.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1438298/"
   },
   {
     "title": "Delhi-6",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/delhi-6.jpg"
+    "poster": "/assets/films/delhi-6.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1043451/"
   },
   {
     "title": "Dev.D",
@@ -174,28 +196,32 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2009",
     "highlight": true,
-    "poster": "/assets/films/devd.jpg"
+    "poster": "/assets/films/devd.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1327035/"
   },
   {
     "title": "Tees Maar Khan",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2010",
-    "poster": "/assets/films/tees-maar-khan.jpg"
+    "poster": "/assets/films/tees-maar-khan.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1572311/"
   },
   {
     "title": "I Hate Luv Storys",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2010",
-    "poster": "/assets/films/i-hate-luv-storys.jpg"
+    "poster": "/assets/films/i-hate-luv-storys.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1667838/"
   },
   {
     "title": "Wake Up Sid",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/wake-up-sid.jpg"
+    "poster": "/assets/films/wake-up-sid.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1324059/"
   },
   {
     "title": "Paan Singh Tomar",
@@ -203,91 +229,104 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2012",
     "highlight": true,
-    "poster": "/assets/films/paan-singh-tomar.jpg"
+    "poster": "/assets/films/paan-singh-tomar.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1620933/"
   },
   {
     "title": "Chillar Party",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2011",
-    "poster": "/assets/films/chillar-party.jpg"
+    "poster": "/assets/films/chillar-party.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1841542/"
   },
   {
     "title": "Delhi Belly",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2011",
-    "poster": "/assets/films/delhi-belly.jpg"
+    "poster": "/assets/films/delhi-belly.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1934231/"
   },
   {
     "title": "Heroine",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2012",
-    "poster": "/assets/films/heroine.jpg"
+    "poster": "/assets/films/heroine.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1949548/"
   },
   {
     "title": "7 Khoon Maaf",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2011",
-    "poster": "/assets/films/7-khoon-maaf.jpg"
+    "poster": "/assets/films/7-khoon-maaf.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1629376/"
   },
   {
     "title": "No One Killed Jessica",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2011",
-    "poster": "/assets/films/no-one-killed-jessica.jpg"
+    "poster": "/assets/films/no-one-killed-jessica.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1734110/"
   },
   {
     "title": "Arjun: The Warrior Prince",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2012",
-    "poster": "/assets/films/arjun-the-warrior-prince.jpg"
+    "poster": "/assets/films/arjun-the-warrior-prince.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2404027/"
   },
   {
     "title": "ABCD: Any Body Can Dance",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/abcd-any-body-can-dance.jpg"
+    "poster": "/assets/films/abcd-any-body-can-dance.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2321163/"
   },
   {
     "title": "Kai Po Che!",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/kai-po-che.jpg"
+    "poster": "/assets/films/kai-po-che.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2213054/"
   },
   {
     "title": "Himmatwala",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/himmatwala.jpg"
+    "poster": "/assets/films/himmatwala.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2344678/"
   },
   {
     "title": "Heropanti",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2014",
-    "poster": "/assets/films/heropanti.jpg"
+    "poster": "/assets/films/heropanti.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt3142232/"
   },
   {
     "title": "Luv Shuv Tey Chicken Khurana",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2012",
-    "poster": "/assets/films/luv-shuv-tey-chicken-khurana.jpg"
+    "poster": "/assets/films/luv-shuv-tey-chicken-khurana.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2186933/"
   },
   {
     "title": "Gippi",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/gippi.jpg"
+    "poster": "/assets/films/gippi.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2814372/"
   },
   {
     "title": "Shahid",
@@ -295,84 +334,96 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2012",
     "highlight": true,
-    "poster": "/assets/films/shahid.jpg"
+    "poster": "/assets/films/shahid.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2181831/"
   },
   {
     "title": "Filmistaan",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2014",
-    "poster": "/assets/films/filmistaan.jpg"
+    "poster": "/assets/films/filmistaan.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2417560/"
   },
   {
     "title": "Rangrezz",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/rangrezz.jpg"
+    "poster": "/assets/films/rangrezz.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2706264/"
   },
   {
     "title": "Joker",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2012",
-    "poster": "/assets/films/joker.jpg"
+    "poster": "/assets/films/joker.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt7286456/"
   },
   {
     "title": "Tere Naal Love Ho Gaya",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2012",
-    "poster": "/assets/films/tere-naal-love-ho-gaya.jpg"
+    "poster": "/assets/films/tere-naal-love-ho-gaya.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2130242/"
   },
   {
     "title": "Thank You",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2011",
-    "poster": "/assets/films/thank-you.jpg"
+    "poster": "/assets/films/thank-you.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1720254/"
   },
   {
     "title": "Saheb, Biwi Aur Gangster",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2011",
-    "poster": "/assets/films/saheb-biwi-aur-gangster.jpg"
+    "poster": "/assets/films/saheb-biwi-aur-gangster.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2073070/"
   },
   {
     "title": "My Friend Pinto",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2011",
-    "poster": "/assets/films/my-friend-pinto.jpg"
+    "poster": "/assets/films/my-friend-pinto.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1512220/"
   },
   {
     "title": "Kurbaan",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/kurbaan.jpg"
+    "poster": "/assets/films/kurbaan.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1185442/"
   },
   {
     "title": "Chance Pe Dance",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2010",
-    "poster": "/assets/films/chance-pe-dance.jpg"
+    "poster": "/assets/films/chance-pe-dance.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1392744/"
   },
   {
     "title": "We Are Family",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2010",
-    "poster": "/assets/films/we-are-family.jpg"
+    "poster": "/assets/films/we-are-family.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1428459/"
   },
   {
     "title": "Peepli Live",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2010",
-    "poster": "/assets/films/peepli-live.jpg"
+    "poster": "/assets/films/peepli-live.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1447508/"
   },
   {
     "title": "Udaan",
@@ -380,7 +431,8 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2010",
     "highlight": true,
-    "poster": "/assets/films/udaan.jpg"
+    "poster": "/assets/films/udaan.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1639426/"
   },
   {
     "title": "A Wednesday!",
@@ -388,133 +440,152 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2008",
     "highlight": true,
-    "poster": "/assets/films/a-wednesday.jpg"
+    "poster": "/assets/films/a-wednesday.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1280558/"
   },
   {
     "title": "Aamir",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2008",
-    "poster": "/assets/films/aamir.jpg"
+    "poster": "/assets/films/aamir.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1241195/"
   },
   {
     "title": "Life in a... Metro",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2007",
-    "poster": "/assets/films/life-in-a-metro.jpg"
+    "poster": "/assets/films/life-in-a-metro.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0800956/"
   },
   {
     "title": "The Blue Umbrella",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2005",
-    "poster": "/assets/films/the-blue-umbrella.jpg"
+    "poster": "/assets/films/the-blue-umbrella.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0457802/"
   },
   {
     "title": "Mumbai Meri Jaan",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2008",
-    "poster": "/assets/films/mumbai-meri-jaan.jpg"
+    "poster": "/assets/films/mumbai-meri-jaan.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1266583/"
   },
   {
     "title": "Dhan Dhana Dhan Goal",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2007",
-    "poster": "/assets/films/dhan-dhana-dhan-goal.jpg"
+    "poster": "/assets/films/dhan-dhana-dhan-goal.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1120897/"
   },
   {
     "title": "Kismat Konnection",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2008",
-    "poster": "/assets/films/kismat-konnection.jpg"
+    "poster": "/assets/films/kismat-konnection.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1105733/"
   },
   {
     "title": "Oye Lucky! Lucky Oye!",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2008",
-    "poster": "/assets/films/oye-lucky-lucky-oye.jpg"
+    "poster": "/assets/films/oye-lucky-lucky-oye.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1292703/"
   },
   {
     "title": "Welcome to Sajjanpur",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2008",
-    "poster": "/assets/films/welcome-to-sajjanpur.jpg"
+    "poster": "/assets/films/welcome-to-sajjanpur.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1221139/"
   },
   {
     "title": "Dhoondte Reh Jaaoge",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/dhoondte-reh-jaaoge.jpg"
+    "poster": "/assets/films/dhoondte-reh-jaaoge.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1391544/"
   },
   {
     "title": "Aagey Se Right",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/aagey-se-right.jpg"
+    "poster": "/assets/films/aagey-se-right.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1479667/"
   },
   {
     "title": "What's Your Raashee?",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/whats-your-raashee.jpg"
+    "poster": "/assets/films/whats-your-raashee.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1242530/"
   },
   {
     "title": "Main Aurr Mrs Khanna",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/main-aurr-mrs-khanna.jpg"
+    "poster": "/assets/films/main-aurr-mrs-khanna.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1174041/"
   },
   {
     "title": "Agyaat",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2009",
-    "poster": "/assets/films/agyaat.jpg"
+    "poster": "/assets/films/agyaat.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1415252/"
   },
   {
     "title": "Jayantabhai Ki Luv Story",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/jayantabhai-ki-luv-story.jpg"
+    "poster": "/assets/films/jayantabhai-ki-luv-story.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2622130/"
   },
   {
     "title": "Ghanchakkar",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/ghanchakkar.jpg"
+    "poster": "/assets/films/ghanchakkar.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2246724/"
   },
   {
     "title": "Issaq",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2013",
-    "poster": "/assets/films/issaq.jpg"
+    "poster": "/assets/films/issaq.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2215163/"
   },
   {
     "title": "Raja Natwarlal",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2014",
-    "poster": "/assets/films/raja-natwarlal.jpg"
+    "poster": "/assets/films/raja-natwarlal.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt3483712/"
   },
   {
     "title": "Dongri Ka Raja",
     "role": "Head of Marketing & Distribution",
     "lang": "Hindi",
     "year": "2016",
-    "poster": "/assets/films/dongri-ka-raja.jpg"
+    "poster": "/assets/films/dongri-ka-raja.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt6046994/"
   },
   {
     "title": "Bollywood Diaries",
@@ -522,28 +593,32 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2016",
     "highlight": true,
-    "poster": "/assets/films/bollywood-diaries.jpg"
+    "poster": "/assets/films/bollywood-diaries.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt5216810/"
   },
   {
     "title": "Project Marathwada",
     "role": "Co-Producer",
     "lang": "Hindi",
     "year": "2016",
-    "poster": "/assets/films/project-marathwada.jpg"
+    "poster": "/assets/films/project-marathwada.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt5714802/"
   },
   {
     "title": "A Flying Jatt",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2016",
-    "poster": "/assets/films/a-flying-jatt.jpg"
+    "poster": "/assets/films/a-flying-jatt.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt5235880/"
   },
   {
     "title": "Shortcut Safari",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Hindi",
     "year": "2016",
-    "poster": "/assets/films/shortcut-safari.jpg"
+    "poster": "/assets/films/shortcut-safari.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt4505006/"
   },
   {
     "title": "Lipstick Under My Burkha",
@@ -551,14 +626,16 @@ const filmographyData: Film[] = [
     "lang": "Hindi",
     "year": "2017",
     "highlight": true,
-    "poster": "/assets/films/lipstick-under-my-burkha.jpg"
+    "poster": "/assets/films/lipstick-under-my-burkha.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt4807830/"
   },
   {
     "title": "Love All",
     "role": "Marketing & In-film",
     "lang": "Hindi",
     "year": "2023",
-    "poster": "/assets/films/love-all.jpg"
+    "poster": "/assets/films/love-all.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt9511468/"
   },
   {
     "title": "The Avengers",
@@ -566,7 +643,8 @@ const filmographyData: Film[] = [
     "lang": "English",
     "year": "2012",
     "highlight": true,
-    "poster": "/assets/films/the-avengers.jpg"
+    "poster": "/assets/films/the-avengers.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0848228/"
   },
   {
     "title": "Guardians of the Galaxy",
@@ -574,7 +652,8 @@ const filmographyData: Film[] = [
     "lang": "English",
     "year": "2014",
     "highlight": true,
-    "poster": "/assets/films/guardians-of-the-galaxy.jpg"
+    "poster": "/assets/films/guardians-of-the-galaxy.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2015381/"
   },
   {
     "title": "Captain America: The Winter Soldier",
@@ -582,14 +661,16 @@ const filmographyData: Film[] = [
     "lang": "English",
     "year": "2014",
     "highlight": true,
-    "poster": "/assets/films/captain-america-the-winter-soldier.jpg"
+    "poster": "/assets/films/captain-america-the-winter-soldier.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1843866/"
   },
   {
     "title": "Maleficent",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2014",
-    "poster": "/assets/films/maleficent.jpg"
+    "poster": "/assets/films/maleficent.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1587310/"
   },
   {
     "title": "Up",
@@ -597,189 +678,216 @@ const filmographyData: Film[] = [
     "lang": "English",
     "year": "2009",
     "highlight": true,
-    "poster": "/assets/films/up.jpg"
+    "poster": "/assets/films/up.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1049413/"
   },
   {
     "title": "Cinderella",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2015",
-    "poster": "/assets/films/cinderella.jpg"
+    "poster": "/assets/films/cinderella.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1661199/"
   },
   {
     "title": "Million Dollar Arm",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2014",
-    "poster": "/assets/films/million-dollar-arm.jpg"
+    "poster": "/assets/films/million-dollar-arm.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1647668/"
   },
   {
     "title": "The Proposal",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/the-proposal.jpg"
+    "poster": "/assets/films/the-proposal.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1080016/"
   },
   {
     "title": "The Lone Ranger",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2013",
-    "poster": "/assets/films/the-lone-ranger.jpg"
+    "poster": "/assets/films/the-lone-ranger.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1210819/"
   },
   {
     "title": "Oz the Great and Powerful",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2013",
-    "poster": "/assets/films/oz-the-great-and-powerful.jpg"
+    "poster": "/assets/films/oz-the-great-and-powerful.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1621044/"
   },
   {
     "title": "Planes",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2013",
-    "poster": "/assets/films/planes.jpg"
+    "poster": "/assets/films/planes.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1691916/"
   },
   {
     "title": "Planes: Fire & Rescue",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2014",
-    "poster": "/assets/films/planes-fire-rescue.jpg"
+    "poster": "/assets/films/planes-fire-rescue.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2980706/"
   },
   {
     "title": "Surrogates",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/surrogates.jpg"
+    "poster": "/assets/films/surrogates.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0986263/"
   },
   {
     "title": "Bolt",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2008",
-    "poster": "/assets/films/bolt.jpg"
+    "poster": "/assets/films/bolt.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0435705/"
   },
   {
     "title": "A Christmas Carol",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/a-christmas-carol.jpg"
+    "poster": "/assets/films/a-christmas-carol.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1049413/"
   },
   {
     "title": "The Princess and the Frog",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/the-princess-and-the-frog.jpg"
+    "poster": "/assets/films/the-princess-and-the-frog.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0780521/"
   },
   {
     "title": "Muppets Most Wanted",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2014",
-    "poster": "/assets/films/muppets-most-wanted.jpg"
+    "poster": "/assets/films/muppets-most-wanted.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2281587/"
   },
   {
     "title": "Bedtime Stories",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2008",
-    "poster": "/assets/films/bedtime-stories.jpg"
+    "poster": "/assets/films/bedtime-stories.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0960731/"
   },
   {
     "title": "Race to Witch Mountain",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/race-to-witch-mountain.jpg"
+    "poster": "/assets/films/race-to-witch-mountain.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1075417/"
   },
   {
     "title": "G-Force",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/g-force.jpg"
+    "poster": "/assets/films/g-force.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1095217/"
   },
   {
     "title": "Tinker Bell and the Lost Treasure",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/tinker-bell-and-the-lost-treasure.jpg"
+    "poster": "/assets/films/tinker-bell-and-the-lost-treasure.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1216515/"
   },
   {
     "title": "Old Dogs",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/old-dogs.jpg"
+    "poster": "/assets/films/old-dogs.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0960731/"
   },
   {
     "title": "Confessions of a Shopaholic",
     "role": "Marketing, Distribution & Syndication",
     "lang": "English",
     "year": "2009",
-    "poster": "/assets/films/confessions-of-a-shopaholic.jpg"
+    "poster": "/assets/films/confessions-of-a-shopaholic.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1093908/"
   },
   {
     "title": "Vettai",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Tamil",
     "year": "2012",
-    "poster": "/assets/films/vettai.jpg"
+    "poster": "/assets/films/vettai.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2140507/"
   },
   {
     "title": "Thaandavam",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Tamil",
     "year": "2012",
-    "poster": "/assets/films/thaandavam.jpg"
+    "poster": "/assets/films/thaandavam.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2359483/"
   },
   {
     "title": "Anjaan",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Tamil",
     "year": "2014",
-    "poster": "/assets/films/anjaan.jpg"
+    "poster": "/assets/films/anjaan.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt3492576/"
   },
   {
     "title": "Settai",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Tamil",
     "year": "2013",
-    "poster": "/assets/films/settai.jpg"
+    "poster": "/assets/films/settai.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2438814/"
   },
   {
     "title": "Kalakalappu",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Tamil",
     "year": "2012",
-    "poster": "/assets/films/kalakalappu.jpg"
+    "poster": "/assets/films/kalakalappu.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2373300/"
   },
   {
     "title": "Mugamoodi",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Tamil",
     "year": "2012",
-    "poster": "/assets/films/mugamoodi.jpg"
+    "poster": "/assets/films/mugamoodi.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2372863/"
   },
   {
     "title": "Theeya Velai Seiyyanum Kumaru",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Tamil",
     "year": "2013",
-    "poster": "/assets/films/theeya-velai-seiyyanum-kumaru.jpg"
+    "poster": "/assets/films/theeya-velai-seiyyanum-kumaru.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2929944/"
   },
   {
     "title": "Muran",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Tamil",
     "year": "2011",
-    "poster": "/assets/films/muran.jpg"
+    "poster": "/assets/films/muran.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2024479/"
   },
   {
     "title": "Grandmaster",
@@ -787,14 +895,16 @@ const filmographyData: Film[] = [
     "lang": "Malayalam",
     "year": "2012",
     "highlight": true,
-    "poster": "/assets/films/grandmaster.jpg"
+    "poster": "/assets/films/grandmaster.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2325754/"
   },
   {
     "title": "Husbands in Goa",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Malayalam",
     "year": "2012",
-    "poster": "/assets/films/husbands-in-goa.jpg"
+    "poster": "/assets/films/husbands-in-goa.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2396349/"
   },
   {
     "title": "Ventilator",
@@ -802,7 +912,8 @@ const filmographyData: Film[] = [
     "lang": "Marathi",
     "year": "2016",
     "highlight": true,
-    "poster": "/assets/films/ventilator.jpg"
+    "poster": "/assets/films/ventilator.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt6074158/"
   },
   {
     "title": "Harishchandrachi Factory",
@@ -810,28 +921,32 @@ const filmographyData: Film[] = [
     "lang": "Marathi",
     "year": "2009",
     "highlight": true,
-    "poster": "/assets/films/harishchandrachi-factory.jpg"
+    "poster": "/assets/films/harishchandrachi-factory.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt1520268/"
   },
   {
     "title": "No Entry: Pudhe Dhoka Aahey",
     "role": "Marketing, Distribution & Syndication",
     "lang": "Marathi",
     "year": "2012",
-    "poster": "/assets/films/no-entry-pudhe-dhoka-aahey.jpg"
+    "poster": "/assets/films/no-entry-pudhe-dhoka-aahey.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2372481/"
   },
   {
     "title": "Youth",
     "role": "Associate Producer",
     "lang": "Marathi",
     "year": "2016",
-    "poster": "/assets/films/youth.jpg"
+    "poster": "/assets/films/youth.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt5784964/"
   },
   {
     "title": "Sur Sapata",
     "role": "Presented By",
     "lang": "Marathi",
     "year": "2019",
-    "poster": "/assets/films/sur-sapata.jpg"
+    "poster": "/assets/films/sur-sapata.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt9877472/"
   },
   {
     "title": "Sarvann",
@@ -839,7 +954,8 @@ const filmographyData: Film[] = [
     "lang": "Punjabi",
     "year": "2017",
     "highlight": true,
-    "poster": "/assets/films/sarvann.jpg"
+    "poster": "/assets/films/sarvann.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt6380614/"
   },
   {
     "title": "Tutak Tutak Tutiya",
@@ -847,7 +963,8 @@ const filmographyData: Film[] = [
     "lang": "Multi-Language",
     "year": "2016",
     "note": "Hindi / Tamil / Telugu",
-    "poster": "/assets/films/tutak-tutak-tutiya.jpg"
+    "poster": "/assets/films/tutak-tutak-tutiya.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt6090724/"
   },
   {
     "title": "Ship of Theseus",
@@ -856,7 +973,8 @@ const filmographyData: Film[] = [
     "year": "2013",
     "note": "English / Hindi / Arabic / Swedish",
     "highlight": true,
-    "poster": "/assets/films/ship-of-theseus.jpg"
+    "poster": "/assets/films/ship-of-theseus.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt2260723/"
   },
   {
     "title": "The Namesake",
@@ -865,7 +983,8 @@ const filmographyData: Film[] = [
     "year": "2006",
     "note": "English / Hindi",
     "highlight": true,
-    "poster": "/assets/films/the-namesake.jpg"
+    "poster": "/assets/films/the-namesake.jpg",
+    "imdbUrl": "https://www.imdb.com/title/tt0492452/"
   }
 ];
 
@@ -945,14 +1064,24 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-50 group-hover:opacity-85 transition-opacity duration-300" />
 
         {/* Top Badges */}
-        <div className="absolute top-2 left-2 right-2 flex items-center justify-between pointer-events-none z-10">
+        <div className="absolute top-2 left-2 right-2 flex items-center justify-between z-20">
           <span className={`px-2 py-0.5 rounded-full backdrop-blur-md font-accent text-[0.6rem] font-bold uppercase tracking-wider shadow-sm ${theme.bg} ${theme.text} bg-white/95 border ${theme.border}`}>
             {film.lang}
           </span>
-          {film.highlight && (
-            <span className="px-2 py-0.5 rounded-full bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white font-accent text-[0.6rem] font-bold shadow-md flex items-center gap-0.5">
-              ⭐ Key
-            </span>
+          
+          {/* Official IMDb Badge on Card */}
+          {film.imdbUrl && (
+            <a
+              href={film.imdbUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="px-2 py-0.5 rounded bg-[#F5C518] hover:bg-[#e2b616] text-black font-accent text-[0.62rem] font-extrabold uppercase tracking-wider shadow-md flex items-center gap-0.5 no-underline transition-transform hover:scale-105"
+              title={`Open ${film.title} on IMDb`}
+            >
+              <span>IMDb</span>
+              <span className="text-[0.55rem]">↗</span>
+            </a>
           )}
         </div>
 
@@ -992,7 +1121,20 @@ function FilmPosterCard({ film, onSelect }: { film: Film; onSelect: () => void }
         </div>
 
         <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between text-[0.68rem] font-accent text-[#64748B]">
-          <span>Details</span>
+          {film.imdbUrl ? (
+            <a
+              href={film.imdbUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-[#D97706] hover:text-[#B45309] font-bold flex items-center gap-1 no-underline"
+            >
+              <span className="px-1.5 py-0.5 rounded bg-[#F5C518] text-black text-[0.6rem]">IMDb</span>
+              <span>Link ↗</span>
+            </a>
+          ) : (
+            <span>Details</span>
+          )}
           <span className="text-[#1D4ED8] font-bold group-hover:translate-x-0.5 transition-transform">→</span>
         </div>
       </div>
@@ -1048,7 +1190,7 @@ export default function FilmographyPage() {
           </h1>
 
           <p className="font-accent text-base sm:text-lg text-[#475569] max-w-3xl leading-relaxed">
-            <span className="text-[#0F172A] font-semibold">120+ films</span> across Hindi, English, Tamil, Malayalam, Marathi, Punjabi and Multi-Language cinema. Explore visual posters, release titles, and commercial distribution leadership across three decades.
+            <span className="text-[#0F172A] font-semibold">120+ films</span> across Hindi, English, Tamil, Malayalam, Marathi, Punjabi and Multi-Language cinema. Explore visual posters, release titles, direct IMDb links, and commercial distribution leadership.
           </p>
 
           {/* Quick Metrics */}
@@ -1132,10 +1274,10 @@ export default function FilmographyPage() {
             <span>
               Showing <strong className="text-[#0F172A]">{filteredFilms.length}</strong> of {filmographyData.length} cinematic titles
             </span>
-            <span className="text-[#1D4ED8] font-medium">Click any movie poster card for credits &amp; details</span>
+            <span className="text-[#1D4ED8] font-medium">Click any card to inspect poster &amp; IMDb page</span>
           </div>
 
-          {/* Films Poster Grid (Compact 2 to 6 columns) */}
+          {/* Films Poster Grid */}
           {filteredFilms.length > 0 ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4.5">
               {filteredFilms.map((film, index) => (
@@ -1206,7 +1348,7 @@ export default function FilmographyPage() {
             {/* Content Right */}
             <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
                   <span className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-accent font-bold uppercase tracking-wider text-[#1D4ED8]">
                     {activeModalFilm.lang}
                   </span>
@@ -1243,12 +1385,22 @@ export default function FilmographyPage() {
                 )}
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-3">
+                {activeModalFilm.imdbUrl && (
+                  <a
+                    href={activeModalFilm.imdbUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2.5 rounded-full font-accent font-extrabold text-xs uppercase tracking-wider no-underline bg-[#F5C518] hover:bg-[#e2b616] text-black shadow-md flex items-center gap-1.5 transition-transform hover:scale-105"
+                  >
+                    <span>View on IMDb</span>
+                    <span className="text-sm">↗</span>
+                  </a>
+                )}
                 <Link
                   href="/contact"
                   onClick={() => setActiveModalFilm(null)}
-                  className="px-5 py-2.5 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline
-                    bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white shadow-sm"
+                  className="px-5 py-2.5 rounded-full font-accent font-bold text-xs uppercase tracking-wider no-underline bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#1E40AF] text-white shadow-sm"
                 >
                   Consult On Similar Projects →
                 </Link>
