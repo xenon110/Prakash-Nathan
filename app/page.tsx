@@ -8,18 +8,6 @@ import ProfilePortraitCard from "@/components/ProfilePortraitCard";
 /* ── Gallery Slides for Coverflow Carousel ── */
 const GALLERY_SLIDES: CoverflowSlide[] = [
   {
-    src: "/assets/p1.jpeg",
-    alt: "Prakash Nathan - Strategic Advisor",
-    title: "Prakash Nathan",
-    subtitle: "Founder & Strategic Advisor",
-  },
-  {
-    src: "/assets/p2.png",
-    alt: "Prakash Nathan - Industry Leader",
-    title: "Prakash Nathan",
-    subtitle: "Entrepreneur & Media Tech Consultant",
-  },
-  {
     src: "/assets/gallery/Amir Khan.png",
     alt: "Prakash Nathan with Aamir Khan",
     title: "Aamir Khan & Prakash Nathan",
