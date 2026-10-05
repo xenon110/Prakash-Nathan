@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { CoverflowCarousel, type CoverflowSlide } from "@/components/ui/coverflow-carousel";
+import ProfilePortraitCard from "@/components/ProfilePortraitCard";
 
 /* ── Gallery Slides for Coverflow Carousel ── */
 const GALLERY_SLIDES: CoverflowSlide[] = [
@@ -11,6 +12,12 @@ const GALLERY_SLIDES: CoverflowSlide[] = [
     alt: "Prakash Nathan - Strategic Advisor",
     title: "Prakash Nathan",
     subtitle: "Founder & Strategic Advisor",
+  },
+  {
+    src: "/assets/p2.png",
+    alt: "Prakash Nathan - Industry Leader",
+    title: "Prakash Nathan",
+    subtitle: "Entrepreneur & Media Tech Consultant",
   },
   {
     src: "/assets/gallery/Amir Khan.png",
@@ -203,46 +210,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero Right Visual / Portrait Card & Quote Banner */}
-          <div className="lg:col-span-5 flex flex-col items-center lg:items-end space-y-5">
-            <div className="relative group max-w-sm sm:max-w-md w-full">
-              {/* Vibrant ambient background glow behind portrait */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#1D4ED8]/25 via-[#38BDF8]/20 to-[#F59E0B]/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-90" />
-              
-              <div className="relative rounded-3xl p-3 glass-card border border-white/90 shadow-[0_20px_50px_rgba(15,23,42,0.1)] overflow-hidden">
-                <div className="relative h-[380px] sm:h-[420px] w-full rounded-2xl overflow-hidden shadow-inner">
-                  <Image
-                    src="/assets/p1.jpeg"
-                    alt="Prakash Nathan - Entrepreneur, Consultant, Entertainment Leader"
-                    fill
-                    className="object-cover object-[75%_20%] group-hover:scale-105 transition-transform duration-700 ease-out"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60" />
-                  
-                  {/* Floating badge inside portrait */}
-                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-xl border border-slate-200/80 shadow-lg">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="font-display font-bold text-base text-[#0F172A] m-0">Prakash Nathan</p>
-                        <p className="font-accent text-xs text-[#1D4ED8] font-semibold m-0">Founder &amp; Strategic Advisor</p>
-                      </div>
-                      <div className="px-3 py-1 rounded-full bg-blue-50 border border-blue-200 font-accent text-[0.68rem] font-bold text-[#1D4ED8]">
-                        30+ Yrs
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Quote Banner directly at the bottom of the profile image */}
-            <div className="max-w-sm sm:max-w-md w-full relative pl-5 border-l-4 border-[#1D4ED8] bg-white/95 p-4 sm:p-5 rounded-r-2xl border-t border-b border-r border-slate-200/80 shadow-[0_4px_20px_rgba(29,78,216,0.08)]">
-              <p className="text-xl sm:text-2xl font-quote italic font-semibold text-[#0F172A] leading-snug m-0 tracking-wide">
-                “A Jack of all Traits”
-              </p>
-            </div>
-          </div>
+          {/* Hero Right Visual / Auto-swapping Portrait Card & Quote Banner */}
+          <ProfilePortraitCard showQuote />
         </div>
       </section>
 
